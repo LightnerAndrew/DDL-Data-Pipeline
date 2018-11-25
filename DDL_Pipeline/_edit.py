@@ -8,18 +8,33 @@ from .metadata import *
 
 
 class edit_asset(auth):
+    '''
+    The edit_asset class generates modifications to existing USAID data assets and datasets. 
 
+    :attr fourfour: the Socrata four-four id for the asset. Must be provided by the user. 
+    :type fourfour: str. 
+    :attr name: the name of the data asset or dataset. defualt is set by the access_metadata() function.
+    :type name: str. 
+    :attr description: description the name of the data asset or dataset. defualt is set by the access_metadata() function.
+    :type description: str. 
+    :attr isParent: True/False whether the type of the asset is a parent or child (USAID asset/dataset)
+    :type isParent: str. 
+    :attr associated_datasets: the list of associated datasets fourfours, name, and socrata links. default is set by the access_metadata() function. 
+    :type associated_datasets: str. 
+
+
+    '''
     # define parameters
     name = 'asset name'
     description = 'asset descripton'
     uid = 'usaid_uid'
     fourfour = 'four-four'
-    parent = False
+    isParent = False
     associated_datasets = None
 
     def find_rev_number(self):
         '''
-        Access the revision number to the asset. 
+        Access the revision number to the asset. The fourfour and login attributes must be provided to find the revision number. 
         '''
         self.rev_number = find_rev_number(self.fourfour, self.link, self.username, self.password)
 
@@ -40,7 +55,7 @@ class edit_asset(auth):
         # set the basic fields 
         self.name = metadata['name']
         self.description = metadata['description']
-        self.parent = DictQuery(metadata).get("metadata|isParent")
+        self.isParent = DictQuery(metadata).get("metadata|isParent")
         self.uid = DictQuery(metadata).get("privateMetadata|custom_fields|USAID Use Only|USAID GUID")
         
         # access the ids of datasets if they exist 
@@ -65,7 +80,7 @@ class edit_asset(auth):
 
     def find_url(self): 
         '''
-        Find the url for the asset of interest. 
+        Find the url for the asset of interest given the login info and the fourfour attributes have values. 
         '''
         if self.prod == False: 
             url = 'https://{}/d/{}'.format(self.link, self.fourfour)
@@ -79,7 +94,32 @@ class edit_asset(auth):
 
 
 class edit_metadata(edit_asset):
+    '''
+    The edit_metadata class allows the user to directly edit the metadata in a socrata asset and all associated datasets. 
 
+    :attr edit_field: the field the user sets to change - Examples: 'COR/AOR Name'. etc. The field must already exist for the edit field attribute to be pushed to Socrata. 
+    :type edit_field: str. 
+    :attr _from: the text to be replaced by the _to field in an set_fieldname(replace=False) statement. 
+    :type _from: str. 
+    :attr _to: the text to set the field to, or to replace the section of text specified in the _from parameter. 
+    :type _to: str. 
+    :attr _add_for_datasets: there may be an additional nececssary string character for the datasets (such as a ',') to replace the string properly. You can add this character in this field: example: ','.
+    :type _add_for_datasets: str. 
+    :attr new_field: True/False whether the field you specify exists within the current asset metadata. 
+    :type new_field: bool 
+    :attr field_path: if new_field is set to True, specify the new field path. Example: 'metadata/custom_fields/Common Core'. 
+    :type field_path: str. 
+    :attr change_datasets: whether to change the field in the associated datasets. (True/False). 
+    :type change_datasets: bool
+
+    >>> to_edit = DDL_Pipeline._edit.edit_metadata()
+    >>> to_edit._from = 'Some example'
+    >>> to_edit.edit_field = 'COR/AOR Name'
+    >>> to_edit._to = 'Different example' 
+    >>> to_edit.change_datasets = True 
+
+
+    '''
     # set parameters
     _from = '{}'
     _to = '{}'
@@ -87,6 +127,7 @@ class edit_metadata(edit_asset):
     field = ''
     change_datasets = False
     new_field = False
+    field_path = None
 
 
     def check_fieldname(self): 
@@ -94,8 +135,6 @@ class edit_metadata(edit_asset):
         This function checks whether the field name provided exists within the current asset. 
         If not, the user will have to specify 'new_field' as true and the `fix_error_in_field()` function
         will not work.
-
-        : 
         '''
         return find_path(self.metadata, self.field)
         

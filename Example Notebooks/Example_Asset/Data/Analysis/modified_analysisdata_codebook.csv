@@ -1,0 +1,132 @@
+,Variable Name,Variable Label,Variable Type
+0,award_id,RespondentID,Integer
+491,framework_1,1.1 Counter Terrorism,Numeric
+492,framework_2,1.2 Combating WMD,Numeric
+493,framework_3,1.3 Stabilization Operations and Defense Reform,Numeric
+494,framework_4,1.4 Counter-narcotics,Numeric
+495,framework_5,1.5 Transnational Crime,Numeric
+496,framework_6,1.6 Conflict Mitigation and Response,Numeric
+497,framework_7,2.1 Rule of Law and Human Rights,Numeric
+498,framework_8,2.2 Good Governance,Numeric
+499,framework_9,2.3 Political Competition and Consensus-Building,Numeric
+500,framework_10,2.4 Civil Society,Numeric
+501,framework_11,3.1 Health,Numeric
+502,framework_12,3.2 Education,Numeric
+503,framework_13,3.3 Social Services and Protection for Vulnerable Populations,Numeric
+504,framework_14,4.1 Macroeconomic Foundation for Growth,Numeric
+505,framework_15,4.2 Trade and Investment,Numeric
+506,framework_16,4.3 Financial Sector,Numeric
+507,framework_17,4.4 Infrastructure,Numeric
+508,framework_18,4.5 Agriculture,Numeric
+509,framework_19,4.6 Private Sector Competitiveness,Numeric
+510,framework_20,4.7 Economic Opportunity,Numeric
+511,framework_21,4.8 Environment,Numeric
+512,framework_22,"5.1 Protection, Assistance and Solutions",Numeric
+513,framework_23,5.2 Disaster Readiness,Numeric
+514,framework_24,5.3 Migration Management,Numeric
+515,framework_96,Don't know,Numeric
+526,cont_start,What was the start date of the award? Please enter in format MM/YYYY.,Integer
+527,total_budget_plan,What was the original award budget for all activities (including non-constructio,double
+528,construct_budget_plan,"Within the original award budget above, please provide an estimate of the amount",double
+529,cor_sitevisit_oe,COR_SITEVISIT_OE,Numeric
+530,subaward_id,SUBAWARD_ID,Integer
+541,construct_budget_plan_pk_oe,CONSTRUCT_BUDGET_PLAN_PK_OE,double
+577,pct_construct,Percent Construction of Total Budget (%),Numeric
+584,catcon1,see notes,Numeric
+585,catnot1,see notes,Numeric
+586,catunk1,see notes,Numeric
+587,catcon2,build_ss_conflict_1 build_ms_conflict_1 == 1,Numeric
+588,catnot2,build_ss_conflict_1 build_ms_conflict_1 == 0,Numeric
+589,catunk2,build_ss_conflict_1 build_ms_conflict_1 == 2,Numeric
+590,catcon3,see notes,Numeric
+591,catnot3,see notes,Numeric
+592,catunk3,see notes,Numeric
+593,catcon4,see notes,Numeric
+594,catnot4,see notes,Numeric
+595,catunk4,see notes,Numeric
+596,catcon5,see notes,Numeric
+597,catnot5,see notes,Numeric
+598,catunk5,see notes,Numeric
+599,catcon6,see notes,Numeric
+600,catnot6,see notes,Numeric
+601,catunk6,see notes,Numeric
+602,catcon7,see notes,Numeric
+603,catnot7,see notes,Numeric
+604,catunk7,see notes,Numeric
+605,catcon8,see notes,Numeric
+606,catnot8,see notes,Numeric
+607,catunk8,see notes,Numeric
+608,catcon9,see notes,Numeric
+609,catnot9,see notes,Numeric
+610,catunk9,see notes,Numeric
+611,catcon10,see notes,Numeric
+612,catnot10,see notes,Numeric
+613,catunk10,see notes,Numeric
+614,catcon11,see notes,Numeric
+615,catnot11,see notes,Numeric
+616,catunk11,see notes,Numeric
+617,catcon12,see notes,Numeric
+618,catnot12,see notes,Numeric
+619,catunk12,see notes,Numeric
+620,disaby1,see notes,Numeric
+621,disabn1,see notes,Numeric
+622,disabdk1,see notes,Numeric
+623,disaby2,build_ss_disab_1 build_ms_disab_1 == 1,Numeric
+624,disabn2,build_ss_disab_1 build_ms_disab_1 == 0,Numeric
+625,disabdk2,build_ss_disab_1 build_ms_disab_1 == 2,Numeric
+626,disaby3,build_ss_disab_2 build_ms_disab_2 build_ss_disab_3 build_ms_disab_3 == 1,Numeric
+627,disabn3,build_ss_disab_2 build_ms_disab_2 build_ss_disab_3 build_ms_disab_3 == 0,Numeric
+628,disabdk3,build_ss_disab_2 build_ms_disab_2 build_ss_disab_3 build_ms_disab_3 == 2,Numeric
+629,disaby4,see notes,Numeric
+630,disabn4,see notes,Numeric
+631,disabdk4,see notes,Numeric
+632,at1,All Buildings,Numeric
+633,at2,School Buildings,Numeric
+634,at3,Clinics/Hospitals,Numeric
+635,at4,Other Buildings,Numeric
+636,at5,All Transportation,Numeric
+637,at6,Roads,Numeric
+638,at7,Other Transportation,Numeric
+639,at8,All Water,Numeric
+640,at9,Water/Wastewater,Numeric
+641,at10,Water Resource Facilitites,Numeric
+642,at11,Energy Related Facilities,Numeric
+643,at12,Other Construction Activities,Numeric
+680,loc1,New,Numeric
+681,loc2,Upgrade,Numeric
+682,loc3,Rehab,Numeric
+683,loct,Total Activities,Numeric
+698,rework,Rework Problem (Major or Minor),Numeric
+699,reworkprob,see notes,Numeric
+777,lrgawrd,Large Awards (>$50 million),Numeric
+0,country_loc1,"In which country/countries is/was construction work being conducted? (1: Afghanistan, 2: Albania, 3: Angola, 4: Armenia, 5: Azerbaijan, 6: Bangladesh, 7: Barbados, 8: Belarus, 9: Benin, 10: Bolivia, 11: Botswana, 12: Bosnia-Herzegovina, 13: Brazil, 14: Burkina Faso, 15: Burma, 16: Burundi, 17: Cambodia, 18: Colombia, 19: Cote d'Ivoire, 20: Cyprus, 21: Democratic Republic of the Congo, 22: Djibouti, 23: Dominican Republic, 24: East Africa Regional, 25: East Timor, 26: Ecuador, 27: Egypt, 28: El Salvador, 29: Ethiopia, 30: Georgia, 31: Ghana, 32: Guatemala, 33: Guinea and Sierra Leone, 34: Guyana, 35: Haiti, 36: Honduras, 37: Hungary, 38: India, 39: Indonesia, 40: Iraq, 41: Jamaica, 42: Jordan, 43: Kenya, 44: Kosovo, 45: Kyrgyzstan, 46: Lebanon, 47: Liberia, 48: Libya, 49: Macedonia, 50: Madagascar, 51: Malawi, 52: Mali, 53: Mexico, 54: Moldova, 55: Mongolia, 56: Montenegro, 57: Morocco, 58: Mozambique, 59: Namibia, 60: Nepal, 61: Nicaragua, 62: Niger, 63: Nigeria, 64: Pakistan, 65: Panama, 66: Paraguay, 67: Peru, 68: Philippines, 69: Russia, 70: Rwanda, 71: Senegal, 72: Serbia, 73: South Africa, 74: South Sudan, 75: Sri Lanka, 76: Sudan, 77: Tanzania, 78: Tunisia, 79: Uganda, 80: Ukraine, 81: Vietnam, 82: West Bank/Gaza, 83: Yemen, 84: Zambia, 85: Zimbabwe, 86: Ireland, 87: United Kingdom, 88: Turkey, 89: Greece, 90: Bulgaria, 91: Romania, 92: Lithuania, 93: Italy, 94: Czech Republic, 95: Swaziland, 98: Somalia, 99: US)",Integer
+1,country_loc2,"Country 2: (1: Afghanistan, 2: Albania, 3: Angola, 4: Armenia, 5: Azerbaijan, 6: Bangladesh, 7: Barbados, 8: Belarus, 9: Benin, 10: Bolivia, 11: Botswana, 12: Bosnia-Herzegovina, 13: Brazil, 14: Burkina Faso, 15: Burma, 16: Burundi, 17: Cambodia, 18: Colombia, 19: Cote d'Ivoire, 20: Cyprus, 21: Democratic Republic of the Congo, 22: Djibouti, 23: Dominican Republic, 24: East Africa Regional, 25: East Timor, 26: Ecuador, 27: Egypt, 28: El Salvador, 29: Ethiopia, 30: Georgia, 31: Ghana, 32: Guatemala, 33: Guinea and Sierra Leone, 34: Guyana, 35: Haiti, 36: Honduras, 37: Hungary, 38: India, 39: Indonesia, 40: Iraq, 41: Jamaica, 42: Jordan, 43: Kenya, 44: Kosovo, 45: Kyrgyzstan, 46: Lebanon, 47: Liberia, 48: Libya, 49: Macedonia, 50: Madagascar, 51: Malawi, 52: Mali, 53: Mexico, 54: Moldova, 55: Mongolia, 56: Montenegro, 57: Morocco, 58: Mozambique, 59: Namibia, 60: Nepal, 61: Nicaragua, 62: Niger, 63: Nigeria, 64: Pakistan, 65: Panama, 66: Paraguay, 67: Peru, 68: Philippines, 69: Russia, 70: Rwanda, 71: Senegal, 72: Serbia, 73: South Africa, 74: South Sudan, 75: Sri Lanka, 76: Sudan, 77: Tanzania, 78: Tunisia, 79: Uganda, 80: Ukraine, 81: Vietnam, 82: West Bank/Gaza, 83: Yemen, 84: Zambia, 85: Zimbabwe, 86: Ireland, 87: United Kingdom, 88: Turkey, 89: Greece, 90: Bulgaria, 91: Romania, 92: Lithuania, 93: Italy, 94: Czech Republic, 95: Swaziland, 98: Somalia, 99: US)",Integer
+2,country_loc3,"Country 3: (1: Afghanistan, 2: Albania, 3: Angola, 4: Armenia, 5: Azerbaijan, 6: Bangladesh, 7: Barbados, 8: Belarus, 9: Benin, 10: Bolivia, 11: Botswana, 12: Bosnia-Herzegovina, 13: Brazil, 14: Burkina Faso, 15: Burma, 16: Burundi, 17: Cambodia, 18: Colombia, 19: Cote d'Ivoire, 20: Cyprus, 21: Democratic Republic of the Congo, 22: Djibouti, 23: Dominican Republic, 24: East Africa Regional, 25: East Timor, 26: Ecuador, 27: Egypt, 28: El Salvador, 29: Ethiopia, 30: Georgia, 31: Ghana, 32: Guatemala, 33: Guinea and Sierra Leone, 34: Guyana, 35: Haiti, 36: Honduras, 37: Hungary, 38: India, 39: Indonesia, 40: Iraq, 41: Jamaica, 42: Jordan, 43: Kenya, 44: Kosovo, 45: Kyrgyzstan, 46: Lebanon, 47: Liberia, 48: Libya, 49: Macedonia, 50: Madagascar, 51: Malawi, 52: Mali, 53: Mexico, 54: Moldova, 55: Mongolia, 56: Montenegro, 57: Morocco, 58: Mozambique, 59: Namibia, 60: Nepal, 61: Nicaragua, 62: Niger, 63: Nigeria, 64: Pakistan, 65: Panama, 66: Paraguay, 67: Peru, 68: Philippines, 69: Russia, 70: Rwanda, 71: Senegal, 72: Serbia, 73: South Africa, 74: South Sudan, 75: Sri Lanka, 76: Sudan, 77: Tanzania, 78: Tunisia, 79: Uganda, 80: Ukraine, 81: Vietnam, 82: West Bank/Gaza, 83: Yemen, 84: Zambia, 85: Zimbabwe, 86: Ireland, 87: United Kingdom, 88: Turkey, 89: Greece, 90: Bulgaria, 91: Romania, 92: Lithuania, 93: Italy, 94: Czech Republic, 95: Swaziland, 98: Somalia, 99: US)",Integer
+3,country_loc4,"Country 4: (1: Afghanistan, 2: Albania, 3: Angola, 4: Armenia, 5: Azerbaijan, 6: Bangladesh, 7: Barbados, 8: Belarus, 9: Benin, 10: Bolivia, 11: Botswana, 12: Bosnia-Herzegovina, 13: Brazil, 14: Burkina Faso, 15: Burma, 16: Burundi, 17: Cambodia, 18: Colombia, 19: Cote d'Ivoire, 20: Cyprus, 21: Democratic Republic of the Congo, 22: Djibouti, 23: Dominican Republic, 24: East Africa Regional, 25: East Timor, 26: Ecuador, 27: Egypt, 28: El Salvador, 29: Ethiopia, 30: Georgia, 31: Ghana, 32: Guatemala, 33: Guinea and Sierra Leone, 34: Guyana, 35: Haiti, 36: Honduras, 37: Hungary, 38: India, 39: Indonesia, 40: Iraq, 41: Jamaica, 42: Jordan, 43: Kenya, 44: Kosovo, 45: Kyrgyzstan, 46: Lebanon, 47: Liberia, 48: Libya, 49: Macedonia, 50: Madagascar, 51: Malawi, 52: Mali, 53: Mexico, 54: Moldova, 55: Mongolia, 56: Montenegro, 57: Morocco, 58: Mozambique, 59: Namibia, 60: Nepal, 61: Nicaragua, 62: Niger, 63: Nigeria, 64: Pakistan, 65: Panama, 66: Paraguay, 67: Peru, 68: Philippines, 69: Russia, 70: Rwanda, 71: Senegal, 72: Serbia, 73: South Africa, 74: South Sudan, 75: Sri Lanka, 76: Sudan, 77: Tanzania, 78: Tunisia, 79: Uganda, 80: Ukraine, 81: Vietnam, 82: West Bank/Gaza, 83: Yemen, 84: Zambia, 85: Zimbabwe, 86: Ireland, 87: United Kingdom, 88: Turkey, 89: Greece, 90: Bulgaria, 91: Romania, 92: Lithuania, 93: Italy, 94: Czech Republic, 95: Swaziland, 98: Somalia, 99: US)",Integer
+4,country_loc5,"Country 5: (1: Afghanistan, 2: Albania, 3: Angola, 4: Armenia, 5: Azerbaijan, 6: Bangladesh, 7: Barbados, 8: Belarus, 9: Benin, 10: Bolivia, 11: Botswana, 12: Bosnia-Herzegovina, 13: Brazil, 14: Burkina Faso, 15: Burma, 16: Burundi, 17: Cambodia, 18: Colombia, 19: Cote d'Ivoire, 20: Cyprus, 21: Democratic Republic of the Congo, 22: Djibouti, 23: Dominican Republic, 24: East Africa Regional, 25: East Timor, 26: Ecuador, 27: Egypt, 28: El Salvador, 29: Ethiopia, 30: Georgia, 31: Ghana, 32: Guatemala, 33: Guinea and Sierra Leone, 34: Guyana, 35: Haiti, 36: Honduras, 37: Hungary, 38: India, 39: Indonesia, 40: Iraq, 41: Jamaica, 42: Jordan, 43: Kenya, 44: Kosovo, 45: Kyrgyzstan, 46: Lebanon, 47: Liberia, 48: Libya, 49: Macedonia, 50: Madagascar, 51: Malawi, 52: Mali, 53: Mexico, 54: Moldova, 55: Mongolia, 56: Montenegro, 57: Morocco, 58: Mozambique, 59: Namibia, 60: Nepal, 61: Nicaragua, 62: Niger, 63: Nigeria, 64: Pakistan, 65: Panama, 66: Paraguay, 67: Peru, 68: Philippines, 69: Russia, 70: Rwanda, 71: Senegal, 72: Serbia, 73: South Africa, 74: South Sudan, 75: Sri Lanka, 76: Sudan, 77: Tanzania, 78: Tunisia, 79: Uganda, 80: Ukraine, 81: Vietnam, 82: West Bank/Gaza, 83: Yemen, 84: Zambia, 85: Zimbabwe, 86: Ireland, 87: United Kingdom, 88: Turkey, 89: Greece, 90: Bulgaria, 91: Romania, 92: Lithuania, 93: Italy, 94: Czech Republic, 95: Swaziland, 98: Somalia, 99: US)",Integer
+5,award_mech,"What type of agreement was this award completed under? (1: Direct Constract, 2: Grant (excluding PIO), 3: Public International Organization (PIO) Grant, 4: Cooperative Agreement, 5: Host Country Award, 6: Government to Government Agreement, 7: Fixed Amount Reimbursement Agreement, 8: USG Interagency Agreement, 9: Other (DCA, multidonor, etc))",Integer
+6,sub_stat,"Which of the following best characterizes the sub-awardee construction implement (1: International Construction/Engineering Firm, 2: International Firm (not primarily construction focused), 3: International NGO/PBO, 4: Other international organization (specify), 5: Local Construction/Engineering Firm, 6: Local firm (not primarily construction focused), 7: Local NGO, 8: Local Government, 9: Other Local organization (specify), -99: Open ended, -99: Open ended)",Integer
+7,conflict_status_sub,"Conflict Status - Sub Award (0: Not, 1: Conflict, 2: Incomplete Subaward data)",Numeric
+8,conflict_status_award,"Conflict Status (0: Not, 1: Conflict, 2: Incomplete Subaward data)",Numeric
+9,reg,"Region (1: Africa, 2: Asia, 3: EE, 4: LAC, 5: ME, 6: OAPA, 7: E3, 8: BFS, 9: DCHA/ASHA, 10: DCHA/FFP, 11: DCHA/OFDA, 12: DCHA/OTI, 13: Global Health)",Numeric
+10,field,"Field/Washington (1: Field, 2: Washington)",Numeric
+11,const_budget,"Construction Budget Value Bands (0: $0, 1: $1 to <$.5M, 2: $.5M-<$1M, 3: $1M-<$10M, 4: $10M-<$50M, 5: $50M-<$100M, 6: $100M and above)",Numeric
+12,pct_construct_bnd,"Percent Construction Bands (1: Primary (>80%), 2: 50-80%, 3: 20-50%, 4: <20%, -99: Open ended)",Numeric
+13,tp1,"All Buildings (0: No, 1: Yes)",Numeric
+14,tp2,"School Buildings (0: No, 1: Yes)",Numeric
+15,tp3,"Clinics/Hospitals (0: No, 1: Yes)",Numeric
+16,tp4,"Other Buildings (0: No, 1: Yes)",Numeric
+17,tp5,"All Transportation (0: No, 1: Yes)",Numeric
+18,tp6,"Roads (0: No, 1: Yes)",Numeric
+19,tp7,"Other Transportation (0: No, 1: Yes)",Numeric
+20,tp8,"All Water (0: No, 1: Yes)",Numeric
+21,tp9,"Water/Wastewater (0: No, 1: Yes)",Numeric
+22,tp10,"Water Resource Facilitites (0: No, 1: Yes)",Numeric
+23,tp11,"Energy Related Facilities (0: No, 1: Yes)",Numeric
+24,tp12,"Other Construction Activities (0: No, 1: Yes)",Numeric
+25,modal,"Modality (1: Government-to-Goverment Agreement, 2: Host Country Award, 3: Fixed Amount Reimbursement Agreement (FARA), 4: Direct Contract, 5: Grant (excluding PIO), 6: PIO Grant, 7: Cooperative Agreement, 8: USG Interagency, 9: Other (DCA, multidonor,other), 10: Unkown, 11: DCHA/FFP, 12: DCHA/OFDA, 13: DCHA/OTI)",Numeric
+26,regnum,"Region (1: Afghanistan, 2: Albania, 3: Angola, 4: Armenia, 5: Azerbaijan, 6: BFS, 7: Bangladesh, 8: Brazil, 9: Burundi, 10: Cambodia, 11: Central Asia Republics, 12: Colombia, 13: Cyprus, 14: DCHA/ASHA, 15: DCHA/FFP, 16: DCHA/OFDA, 17: DCHA/OTI, 18: Dem Rep of Congo, 19: Djibouti, 20: Dominican Republic, 21: E3, 22: E3/Water, 23: East Africa Regional, 24: Eastern Caribbean, 25: Ecuador, 26: Egypt, 27: El Salvador, 28: Ethiopia, 29: Europe and Eurasia, 30: Georgia, 31: Ghana, 32: Guatemala, 33: Haiti, 34: Health, 35: Honduras, 36: Indonesia, 37: Iraq, 38: Jamaica, 39: Jordan, 40: Kenya, 41: Kosovo, 42: Lebanon, 43: Liberia, 44: Macedonia, 45: Madagascar, 46: Malawi, 47: Mali, 48: Moldova, 49: Mongolia, 50: Morocco, 51: Mozambique, 52: Nepal, 53: Nicaragua, 54: Nigeria, 55: Pakistan, 56: Paraguay, 57: Peru, 58: Philippines, 59: Rwanda, 60: Sarajevo, Bosnia and Herzegovina â€Ž, 61: Senegal, 62: Serbia, 63: Somalia, 64: South Africa, 65: South Sudan, 66: Southern Africa, 67: Sri Lanka, 68: Sudan, 69: Tanzania, 70: Uganda, 71: Ukraine, 72: Vietnam, 73: West Africa Regional, 74: West Bank Gaza, 75: Zambia, 76: Zimbabwe)",long
+27,omfund_avail2,"Was availability of O&M funding assessed? (0: No, 1: Yes, by USAID, 2: Yes, by USAID awardee, 3: Yes, by others specify, 4: Don't know/No response)",Numeric
+28,millplus,"Construction Budget (0: <$1m, 1: >=$1m)",Numeric
+29,post,"After April 3, 2012? (0: No, 1: Yes)",Numeric
+30,dcha,"DCHA (0: No, 1: Yes, -99: Open ended)",Numeric

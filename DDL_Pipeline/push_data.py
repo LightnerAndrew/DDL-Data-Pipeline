@@ -126,7 +126,7 @@ def apply_revision(fourfour: str,  link: str, username: str, password:str, revis
     return response
 
 
-def push_attachment(file_path:str, fourfour:str, link:str, username:str, password:str)
+def push_attachment(file_path:str, fourfour:str, link:str, username:str, password:str):
     '''
     Push an attachment to the socrata asset of selection. 
     
@@ -148,13 +148,13 @@ def push_attachment(file_path:str, fourfour:str, link:str, username:str, passwor
 
     # request parameters. 
     url = 'https://{}/api/views/{}/files.txt'.format(link, fourfour)
-    authen = HTTPBasicAuth(self.username, self.password)
+    authen = HTTPBasicAuth(username, password)
     
     # load file 
     file = {'file': open(file_path, 'rb')}
     
     # push file to socrata 
-    response = requests.post(url, files=file, auth=auth)
+    response = requests.post(url, files=file, auth=authen)
 
     # format results to be set in the metadata 
     json = response.json() 

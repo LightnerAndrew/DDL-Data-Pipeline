@@ -1,0 +1,25 @@
+Required,Field,Value
+1,Title,Construction Survey
+1,distribution-title,"USAID Construction Assessment, Analysis"
+1,Unique-Identification,6ee23912-b343-4ba6-bca7-77a310292f10
+1,GUID_suffix,002V01
+1,distribution-describedBy,modified_analysisdata_codebook.csv
+1,row,Construction Project
+1,describedBy-columns,"[B2, C2]"
+1,distribution-downloadURL,analysisdata.csv
+1,distribution-description,"This dataset contains data on the primary awards identified in the survey of USAID construction carried out between June 1, 2011 to June 20 to learn about the character, scope, value and management of USAID supported construction activities."
+0,attachment_2_title,
+0,attachment_5_title,
+0,attachment_5,
+0,attachment_4_title,
+0,attachment_4,
+0,attachment_3_title,
+0,attachment_3,
+0,distribution-mediaType,text/csv
+0,distribution-accessURL,
+0,attachment_1_title,
+0,attachment_1,
+0,distribution-describedByType,text.csv
+0,distribution-format,csv
+0,distribution-conformsTo,
+0,attachment_2,

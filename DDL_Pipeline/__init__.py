@@ -44,9 +44,10 @@ class auth(object):
             self.link = 'usaid-ddl-dev.data.socrata.com'
         else:
             self.link = 'usaid-ddl.data.socrata.com'
-            print(self.link)
+            
 
         self.auth_obj = Authorization(self.link, self.username, self.password)
+        self.client = soda.Socrata(self.link, self.api_key, self.username, self.password)
 
 
     def login(self):

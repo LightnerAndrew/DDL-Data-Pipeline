@@ -1,0 +1,982 @@
+,Variable Name,Variable Label,Variable Type
+0,award_id,RespondentID,Integer
+1,region,Region,String
+2,award_name,Award No,String
+6,reason_refusal,Reason why choosing not to continue at this time,String
+10,projname_conf_oe,PROJNAME_CONF_OE,String
+14,award_no_conf_oe,AWARD_NO_CONF_OE,String
+514,country_additional,Additional countries:,String
+520,sponsoroff_oe,SPONSOROFF_OE,String
+610,wauoff_bureaus,WAUOFF_Bureaus,String
+611,wauoff_office,WAUOFF_Office,String
+612,framework,What is the F Framework program area? Select all that apply.,Integer
+613,framework_1,1.1 Counter Terrorism,Numeric
+614,framework_2,1.2 Combating WMD,Numeric
+615,framework_3,1.3 Stabilization Operations and Defense Reform,Numeric
+616,framework_4,1.4 Counter-narcotics,Numeric
+617,framework_5,1.5 Transnational Crime,Numeric
+618,framework_6,1.6 Conflict Mitigation and Response,Numeric
+619,framework_7,2.1 Rule of Law and Human Rights,Numeric
+620,framework_8,2.2 Good Governance,Numeric
+621,framework_9,2.3 Political Competition and Consensus-Building,Numeric
+622,framework_10,2.4 Civil Society,Numeric
+623,framework_11,3.1 Health,Numeric
+624,framework_12,3.2 Education,Numeric
+625,framework_13,3.3 Social Services and Protection for Vulnerable Populations,Numeric
+626,framework_14,4.1 Macroeconomic Foundation for Growth,Numeric
+627,framework_15,4.2 Trade and Investment,Numeric
+628,framework_16,4.3 Financial Sector,Numeric
+629,framework_17,4.4 Infrastructure,Numeric
+630,framework_18,4.5 Agriculture,Numeric
+631,framework_19,4.6 Private Sector Competitiveness,Numeric
+632,framework_20,4.7 Economic Opportunity,Numeric
+633,framework_21,4.8 Environment,Numeric
+634,framework_22,"5.1 Protection, Assistance and Solutions",Numeric
+635,framework_23,5.2 Disaster Readiness,Numeric
+636,framework_24,5.3 Migration Management,Numeric
+637,framework_96,Don't know,Numeric
+642,ecd_num_oe,ECD_NUM_OE,String
+643,ecdnum_spc,Please specify the reason there is no ECD number is available:,String
+663,assess_who,Who carried out the capacity assessment? Check all that apply.,Integer
+664,assess_who_1,USAID,Numeric
+665,assess_who_2,Awardee self-assessment,Numeric
+666,assess_who_3,"Other USG, Specify",Numeric
+667,assess_who_3_oe,ASSESS_WHO_3_OE,String
+668,assess_who_4,"Other donor, Specify",Numeric
+669,assess_who_4_oe,ASSESS_WHO_4_OE,String
+670,assess_who_5,Host Country Government,Numeric
+671,assess_who_6,"Other, Specify",Numeric
+672,assess_who_6_oe,ASSESS_WHO_6_OE,String
+673,access_proc_old,What process(es) were used to assess the capacity of the implementing partner? S,Integer
+674,access_proc1,ACCESS_PROC1,Integer
+675,access_proc1_1,Public Financial Management Risk Assessment Framework (PFMRAF) Stage 2 Risk Asse,Numeric
+676,access_proc2,ACCESS_PROC2,Integer
+677,access_proc2_2,Assurance under ADS 317,Numeric
+678,access_proc3,ACCESS_PROC3,Integer
+679,access_proc3_3,Certification under ADS301/305,Numeric
+680,access_proc5,ACCESS_PROC5,Integer
+681,access_proc5_5,Pre-award Survey,Numeric
+682,access_proc4,ACCESS_PROC4,Integer
+683,access_proc4_4,Technical capacity analysis in project design under ADS 201,Numeric
+684,access_proc6,ACCESS_PROC6,Integer
+685,access_proc6_6,Technical evaluation in competition process,Numeric
+686,access_proc7,ACCESS_PROC7,Integer
+687,access_proc7_7,Responsibility determination,Numeric
+688,access_proc8,ACCESS_PROC8,Integer
+689,access_proc8_96,Don't know,Numeric
+690,access_proc9,ACCESS_PROC9,Integer
+691,access_proc9_9,Other - Specify,Numeric
+692,access_proc9_9_oe,ACCESS_PROC9_9_OE,String
+700,enab_env_type,What types of support were provided? Select all that apply.,Integer
+701,enab_env_type_1,Sector regulatory reform,Numeric
+702,enab_env_type_2,Building code reform,Numeric
+703,enab_env_type_3,"Strengthening internal operations (financial systems, personnel systems, busines",Numeric
+704,enab_env_type_4,Tariff development/reform,Numeric
+705,enab_env_type_5,Construction trades training,Numeric
+706,enab_env_type_6,Operations & maintenance training,Numeric
+707,enab_env_type_7,Environmental procedures,Numeric
+708,enab_env_type_8,Regulatory authorities,Numeric
+709,enab_env_type_9,Monitoring and evaluation,Numeric
+710,enab_env_type_10,"Other, Specify:",Numeric
+711,enab_env_type_10_oe,ENAB_ENV_TYPE_10_OE,String
+716,cap_build_oe,CAP_BUILD_OE,String
+723,omfund_avail_oe,OMFUND_AVAIL_OE,String
+729,omfund_con,What source(s) will provide continued operations and maintenance (O&M) funding? ,Integer
+730,omfund_con_1,Host government commitment (historical budget allocation),Numeric
+731,omfund_con_2,Host government commitment (new budget allocation),Numeric
+732,omfund_con_3,Local community,Numeric
+733,omfund_con_4,"Tariff system/user fees [viable, provides adequate O&M funds]",Numeric
+734,omfund_con_5,"Tariff system/user fees [unviable, does not provide adequate O&M funds]",Numeric
+735,omfund_con_6,Maintenance fund,Numeric
+736,omfund_con_9,Not determined,Numeric
+737,omfund_con_10,"Other, Specify",Numeric
+738,omfund_con_10_oe,OMFUND_CON_10_OE,String
+739,omfund_con_96,Don't know,Numeric
+740,omfund_con_7,USAID Funding,Numeric
+741,omfund_con_8,Public international organization or other donor funding,Numeric
+742,om_contin,Are there additional requirements upon which adequate O&M funding is contingent?,Numeric
+743,om_contin_1,Capacity building,Numeric
+744,om_contin_2,New laws,Numeric
+745,om_contin_3,Increased number of users,Numeric
+746,om_contin_4,Better collection of tariffs and user fees,Numeric
+747,om_contin_5,Community organization/support,Numeric
+748,om_contin_6,"Other, Specify",Numeric
+749,om_contin_6_oe,OM_CONTIN_6_OE,String
+750,om_contin_96,Don't know,Numeric
+751,om_contin_0,None,Numeric
+768,gov_consult_who,Which government entities were consulted in the design of the infrastructure? Se,Integer
+769,gov_consult_who_1,Central government authorities/Ministry officials.,Numeric
+770,gov_consult_who_2,Regional officials,Numeric
+771,gov_consult_who_3,Local officials,Numeric
+772,gov_consult_who_4,"Other, Specify",Numeric
+773,gov_consult_who_4_oe,GOV_CONSULT_WHO_4_OE,String
+778,stkh_consult_who,Which non-governmental stakeholders were consulted in the design of the infrastr,Integer
+779,stkh_consult_who_1,NGOs/CSOs,Numeric
+780,stkh_consult_who_2,User/business associations,Numeric
+781,stkh_consult_who_3,Community groups,Numeric
+782,stkh_consult_who_4,"Other, Specify",Numeric
+783,stkh_consult_who_4_oe,STKH_CONSULT_WHO_4_OE,String
+788,site_apprv_who,Which government entities gave formal approval for the construction activity sit,Integer
+789,site_apprv_who_1,Central government authorities/Ministry officials.,Numeric
+790,site_apprv_who_2,Regional officials,Numeric
+791,site_apprv_who_3,Local officials,Numeric
+792,site_apprv_who_4,"Other, Specify",Numeric
+793,site_apprv_who_4_oe,SITE_APPRV_WHO_4_OE,String
+806,tech_who,Which USG officials were involved? Select all that apply.,Integer
+807,tech_who_1,USAID/Washington,Numeric
+808,tech_who_2,Other country team,Numeric
+809,tech_who_3,State Department/Washington,Numeric
+810,tech_who_4,Congress,Numeric
+811,tech_who_5,Department of Defense,Numeric
+812,tech_who_6,"Other, Specify",Numeric
+813,tech_who_6_oe,TECH_WHO_6_OE,String
+814,tech_who_7,Don't know,Numeric
+825,award_type_oe,AWARD_TYPE_OE,String
+830,far16_type,What type of FAR Part 16 award was used?,Integer
+860,dlp_oe,DLP_OE,String
+862,des_std_award_1,International Building Code (IBC),Numeric
+863,des_std_award_2,Uniform Building Code,Numeric
+864,des_std_award_3,Local Codes,Numeric
+865,des_std_award_4,AASHTO: American Association Of State And Highway Transportation Officials,Numeric
+866,des_std_award_5,International Code Council,Numeric
+867,des_std_award_6,ASCE: American Society Of Civil Engineers,Numeric
+868,des_std_award_7,ANSI: American National Standards Institute,Numeric
+869,des_std_award_8,OSHA: Occupational Safety And Health Administration,Numeric
+870,des_std_award_9,"Other, Specify",Numeric
+871,des_std_award_9_oe,DES_STD_AWARD_9_OE,String
+872,des_std_award_96,Don't know,Numeric
+877,hazard_matl_oe,HAZARD_MATL_OE,String
+878,hazard_matl_bs,"What standards were used specifying the use of safe, nonhazardous building mater",Integer
+879,hazard_matl_bs_1,US Standards,Numeric
+880,hazard_matl_bs_2,Local Standards,Numeric
+881,hazard_matl_bs_3,International Standards,Numeric
+882,hazard_matl_bs_96,Don't know,Numeric
+883,hazard_matl_bs_4,"Other, Specify",Numeric
+884,hazard_matl_bs_4_oe,HAZARD_MATL_BS_4_OE,String
+889,seis_des_std,What standard were/are used for seismic design? Select all that apply.,Integer
+890,seis_des_std_1,"Regulations for Seismic Design: A World List, 1996",Numeric
+891,seis_des_std_2,"Regulations for Seismic Design: Supplement, 2000",Numeric
+892,seis_des_std_3,"Regulations for Seismic Design: A World List, 2004",Numeric
+893,seis_des_std_4,Practice of Earthquake Hazard Assessment,Numeric
+894,seis_des_std_5,International Handbook of Earthquake Engineering,Numeric
+895,seis_des_std_6,Seismic Design for Buildings,Numeric
+896,seis_des_std_7,"Uniform Building Code, 1997",Numeric
+897,seis_des_std_8,"International Building Code, 2003",Numeric
+898,seis_des_std_9,"Other, Specify",Numeric
+899,seis_des_std_9_oe,SEIS_DES_STD_9_OE,String
+900,seis_des_std_96,Don't know,Numeric
+905,seis_cat_oe,SEIS_CAT_OE,String
+914,wind_std,What standards were/are used for wind design? Select all that apply.,Integer
+915,wind_std_1,IBC: International Building Code,Numeric
+916,wind_std_2,UBC: Uniform Building Code,Numeric
+917,wind_std_3,Local building codes,Numeric
+918,wind_std_4,"Other, Specify",Numeric
+919,wind_std_4_oe,WIND_STD_4_OE,String
+920,wind_std_96,Don't know,Numeric
+921,wind_std_5,None,Numeric
+943,est_prep_oe,EST_PREP_OE,String
+968,cost_rev_oe,COST_REV_OE,String
+994,est_sched_prep_oe,EST_SCHED_PREP_OE,String
+999,usg_inc_oe,USG_INC_OE,String
+1009,return_rate_oe,RETURN_RATE_OE,String
+1030,prime_stat_oe,PRIME_STAT_OE,String
+1039,cont_start,What was the start date of the award? Please enter in format MM/YYYY.,Integer
+1040,cont_end_plan,What was the planned end date of the award? Please enter in format MM/YYYY.,Integer
+1041,total_budget_plan,What was the original award budget for all activities (including non-constructio,double
+1042,construct_budget_plan,"Within the original award budget above, please provide an estimate of the amount",double
+1064,lic_app_oe,LIC_APP_OE,String
+1065,mod_no,How many award modifications for the construction component were issued?,Integer
+1066,mod_des_1,For modification please tell us if modification 1 covered any of the following r,Integer
+1067,mod_des_1_1,Modification 1: Increase in quantity delivered/requested,Numeric
+1068,mod_des_1_2,Modification 1: Decrease in quantity delivered/requested,Numeric
+1069,mod_des_1_3,Modification 1: Increase in capacity delivered/requested,Numeric
+1070,mod_des_1_4,Modification 1: Decrease in capacity delivered/requested,Numeric
+1071,mod_des_1_5,Modification 1: Schedule extended,Numeric
+1072,mod_des_1_6,Modification 1: Schedule shortenend,Numeric
+1073,mod_des_1_7,Modification 1: Rework needed,Numeric
+1074,mod_des_1_8,Modification 1: Sustainability - anything to improve the longevity of the facili,Numeric
+1075,mod_des_1_9,Modification 1: Compliance to meet health & safety requirements,Numeric
+1076,mod_des_1_10,Modification 1: Compliance to meet environmental requirements,Numeric
+1077,mod_des_1_11,Modification 1: Compliance to meet disability access requirements (local or inte,Numeric
+1078,mod_des_1_12,Modification 1: Other requirements,Numeric
+1079,mod_des_1_13,"Modification 1: Other, Specify",Numeric
+1080,mod_des_1_13_oe,MOD_DES_1_13_OE,String
+1081,mod_des_1_96,Modification 1: Don't know,Numeric
+1082,mod_value_1,What was the value of modification?,double
+1083,mod_des_2,For modification please tell us if modification 2 covered any of the following r,Integer
+1084,mod_des_2_1,Modification 2: Increase in quantity delivered/requested,Numeric
+1085,mod_des_2_2,Modification 2: Decrease in quantity delivered/requested,Numeric
+1086,mod_des_2_3,Modification 2: Increase in capacity delivered/requested,Numeric
+1087,mod_des_2_4,Modification 2: Decrease in capacity delivered/requested,Numeric
+1088,mod_des_2_5,Modification 2: Schedule extended,Numeric
+1089,mod_des_2_6,Modification 2: Schedule shortenend,Numeric
+1090,mod_des_2_7,Modification 2: Rework needed,Numeric
+1091,mod_des_2_8,Modification 2: Sustainability - anything to improve the longevity of the facili,Numeric
+1092,mod_des_2_9,Modification 2: Compliance to meet health & safety requirements,Numeric
+1093,mod_des_2_10,Modification 2: Compliance to meet environmental requirements,Numeric
+1094,mod_des_2_11,Modification 2: Compliance to meet disability access requirements (local or inte,Numeric
+1095,mod_des_2_12,Modification 2: Other requirements,Numeric
+1096,mod_des_2_13,"Modification 2: Other, Specify",Numeric
+1097,mod_des_2_13_oe,MOD_DES_2_13_OE,String
+1098,mod_des_2_96,Modification 2: Don't know,Numeric
+1099,mod_value_2,What was the value of modification?,double
+1100,mod_des_3,For modification please tell us if modification 3 covered any of the following r,Integer
+1101,mod_des_3_1,Modification 3: Increase in quantity delivered/requested,Numeric
+1102,mod_des_3_2,Modification 3: Decrease in quantity delivered/requested,Numeric
+1103,mod_des_3_3,Modification 3: Increase in capacity delivered/requested,Numeric
+1104,mod_des_3_4,Modification 3: Decrease in capacity delivered/requested,Numeric
+1105,mod_des_3_5,Modification 3: Schedule extended,Numeric
+1106,mod_des_3_6,Modification 3: Schedule shortenend,Numeric
+1107,mod_des_3_7,Modification 3: Rework needed,Numeric
+1108,mod_des_3_8,Modification 3: Sustainability - anything to improve the longevity of the facili,Numeric
+1109,mod_des_3_9,Modification 3: Compliance to meet health & safety requirements,Numeric
+1110,mod_des_3_10,Modification 3: Compliance to meet environmental requirements,Numeric
+1111,mod_des_3_11,Modification 3: Compliance to meet disability access requirements (local or inte,Numeric
+1112,mod_des_3_12,Modification 3: Other requirements,Numeric
+1113,mod_des_3_13,"Modification 3: Other, Specify",Numeric
+1114,mod_des_3_13_oe,MOD_DES_3_13_OE,String
+1115,mod_des_3_96,Modification 3: Don't know,Numeric
+1116,mod_value_3,What was the value of modification?,double
+1117,mod_des_4,For modification please tell us if modification 4 covered any of the following r,Integer
+1118,mod_des_4_1,Modification 4: Increase in quantity delivered/requested,Numeric
+1119,mod_des_4_2,Modification 4: Decrease in quantity delivered/requested,Numeric
+1120,mod_des_4_3,Modification 4: Increase in capacity delivered/requested,Numeric
+1121,mod_des_4_4,Modification 4: Decrease in capacity delivered/requested,Numeric
+1122,mod_des_4_5,Modification 4: Schedule extended,Numeric
+1123,mod_des_4_6,Modification 4: Schedule shortenend,Numeric
+1124,mod_des_4_7,Modification 4: Rework needed,Numeric
+1125,mod_des_4_8,Modification 4: Sustainability - anything to improve the longevity of the facili,Numeric
+1126,mod_des_4_9,Modification 4: Compliance to meet health & safety requirements,Numeric
+1127,mod_des_4_10,Modification 4: Compliance to meet environmental requirements,Numeric
+1128,mod_des_4_11,Modification 4: Compliance to meet disability access requirements (local or inte,Numeric
+1129,mod_des_4_12,Modification 4: Other requirements,Numeric
+1130,mod_des_4_13,"Modification 4: Other, Specify",Numeric
+1131,mod_des_4_13_oe,MOD_DES_4_13_OE,String
+1132,mod_des_4_96,Modification 4: Don't know,Numeric
+1133,mod_value_4,What was the value of modification?,double
+1134,mod_des_5,For modification please tell us if modification 5 covered any of the following r,Integer
+1135,mod_des_5_1,Modification 5: Increase in quantity delivered/requested,Numeric
+1136,mod_des_5_2,Modification 5: Decrease in quantity delivered/requested,Numeric
+1137,mod_des_5_3,Modification 5: Increase in capacity delivered/requested,Numeric
+1138,mod_des_5_4,Modification 5: Decrease in capacity delivered/requested,Numeric
+1139,mod_des_5_5,Modification 5: Schedule extended,Numeric
+1140,mod_des_5_6,Modification 5: Schedule shortenend,Numeric
+1141,mod_des_5_7,Modification 5: Rework needed,Numeric
+1142,mod_des_5_8,Modification 5: Sustainability - anything to improve the longevity of the facili,Numeric
+1143,mod_des_5_9,Modification 5: Compliance to meet health & safety requirements,Numeric
+1144,mod_des_5_10,Modification 5: Compliance to meet environmental requirements,Numeric
+1145,mod_des_5_11,Modification 5: Compliance to meet disability access requirements (local or inte,Numeric
+1146,mod_des_5_12,Modification 5: Other requirements,Numeric
+1147,mod_des_5_13,"Modification 5: Other, Specify",Numeric
+1148,mod_des_5_13_oe,MOD_DES_5_13_OE,String
+1149,mod_des_5_96,Modification 5: Don't know,Numeric
+1150,mod_value_5,What was the value of modification?,double
+1151,mod_des_6,For modification please tell us if modification 6 covered any of the following r,Integer
+1152,mod_des_6_1,Modification 6: Increase in quantity delivered/requested,Numeric
+1153,mod_des_6_2,Modification 6: Decrease in quantity delivered/requested,Numeric
+1154,mod_des_6_3,Modification 6: Increase in capacity delivered/requested,Numeric
+1155,mod_des_6_4,Modification 6: Decrease in capacity delivered/requested,Numeric
+1156,mod_des_6_5,Modification 6: Schedule extended,Numeric
+1157,mod_des_6_6,Modification 6: Schedule shortenend,Numeric
+1158,mod_des_6_7,Modification 6: Rework needed,Numeric
+1159,mod_des_6_8,Modification 6: Sustainability - anything to improve the longevity of the facili,Numeric
+1160,mod_des_6_9,Modification 6: Compliance to meet health & safety requirements,Numeric
+1161,mod_des_6_10,Modification 6: Compliance to meet environmental requirements,Numeric
+1162,mod_des_6_11,Modification 6: Compliance to meet disability access requirements (local or inte,Numeric
+1163,mod_des_6_12,Modification 6: Other requirements,Numeric
+1164,mod_des_6_13,"Modification 6: Other, Specify",Numeric
+1165,mod_des_6_13_oe,MOD_DES_6_13_OE,String
+1166,mod_des_6_96,Modification 6: Don't know,Numeric
+1167,mod_value_6,What was the value of modification?,double
+1168,mod_des_7,For modification please tell us if modification 7 covered any of the following r,Numeric
+1169,mod_des_7_1,Modification 7: Increase in quantity delivered/requested,Numeric
+1170,mod_des_7_2,Modification 7: Decrease in quantity delivered/requested,Numeric
+1171,mod_des_7_3,Modification 7: Increase in capacity delivered/requested,Numeric
+1172,mod_des_7_4,Modification 7: Decrease in capacity delivered/requested,Numeric
+1173,mod_des_7_5,Modification 7: Schedule extended,Numeric
+1174,mod_des_7_6,Modification 7: Schedule shortenend,Numeric
+1175,mod_des_7_7,Modification 7: Rework needed,Numeric
+1176,mod_des_7_8,Modification 7: Sustainability - anything to improve the longevity of the facili,Numeric
+1177,mod_des_7_9,Modification 7: Compliance to meet health & safety requirements,Numeric
+1178,mod_des_7_10,Modification 7: Compliance to meet environmental requirements,Numeric
+1179,mod_des_7_11,Modification 7: Compliance to meet disability access requirements (local or inte,Numeric
+1180,mod_des_7_12,Modification 7: Other requirements,Numeric
+1181,mod_des_7_13,"Modification 7: Other, Specify",Numeric
+1182,mod_des_7_13_oe,MOD_DES_7_13_OE,String
+1183,mod_des_7_96,Modification 7: Don't know,Numeric
+1184,mod_value_7,What was the value of modification?,double
+1185,mod_des_8,For modification please tell us if modification 8 covered any of the following r,Numeric
+1186,mod_des_8_1,Modification 8: Increase in quantity delivered/requested,Numeric
+1187,mod_des_8_2,Modification 8: Decrease in quantity delivered/requested,Numeric
+1188,mod_des_8_3,Modification 8: Increase in capacity delivered/requested,Numeric
+1189,mod_des_8_4,Modification 8: Decrease in capacity delivered/requested,Numeric
+1190,mod_des_8_5,Modification 8: Schedule extended,Numeric
+1191,mod_des_8_6,Modification 8: Schedule shortenend,Numeric
+1192,mod_des_8_7,Modification 8: Rework needed,Numeric
+1193,mod_des_8_8,Modification 8: Sustainability - anything to improve the longevity of the facili,Numeric
+1194,mod_des_8_9,Modification 8: Compliance to meet health & safety requirements,Numeric
+1195,mod_des_8_10,Modification 8: Compliance to meet environmental requirements,Numeric
+1196,mod_des_8_11,Modification 8: Compliance to meet disability access requirements (local or inte,Numeric
+1197,mod_des_8_12,Modification 8: Other requirements,Numeric
+1198,mod_des_8_13,"Modification 8: Other, Specify",Numeric
+1199,mod_des_8_13_oe,MOD_DES_8_13_OE,String
+1200,mod_des_8_96,Modification 8: Don't know,Numeric
+1201,mod_value_8,What was the value of modification?,double
+1202,mod_des_9,For modification please tell us if modification 9 covered any of the following r,Numeric
+1203,mod_des_9_1,Modification 9: Increase in quantity delivered/requested,Numeric
+1204,mod_des_9_2,Modification 9: Decrease in quantity delivered/requested,Numeric
+1205,mod_des_9_3,Modification 9: Increase in capacity delivered/requested,Numeric
+1206,mod_des_9_4,Modification 9: Decrease in capacity delivered/requested,Numeric
+1207,mod_des_9_5,Modification 9: Schedule extended,Numeric
+1208,mod_des_9_6,Modification 9: Schedule shortenend,Numeric
+1209,mod_des_9_7,Modification 9: Rework needed,Numeric
+1210,mod_des_9_8,Modification 9: Sustainability - anything to improve the longevity of the facili,Numeric
+1211,mod_des_9_9,Modification 9: Compliance to meet health & safety requirements,Numeric
+1212,mod_des_9_10,Modification 9: Compliance to meet environmental requirements,Numeric
+1213,mod_des_9_11,Modification 9: Compliance to meet disability access requirements (local or inte,Numeric
+1214,mod_des_9_12,Modification 9: Other requirements,Numeric
+1215,mod_des_9_13,"Modification 9: Other, Specify",Numeric
+1216,mod_des_9_13_oe,MOD_DES_9_13_OE,String
+1217,mod_des_9_96,Modification 9: Don't know,Numeric
+1218,mod_value_9,What was the value of modification?,long
+1219,mod_des_10,For modification please tell us if modification 10 covered any of the following ,Numeric
+1220,mod_des_10_1,Modification 10: Increase in quantity delivered/requested,Numeric
+1221,mod_des_10_2,Modification 10: Decrease in quantity delivered/requested,Numeric
+1222,mod_des_10_3,Modification 10: Increase in capacity delivered/requested,Numeric
+1223,mod_des_10_4,Modification 10: Decrease in capacity delivered/requested,Numeric
+1224,mod_des_10_5,Modification 10: Schedule extended,Numeric
+1225,mod_des_10_6,Modification 10: Schedule shortenend,Numeric
+1226,mod_des_10_7,Modification 10: Rework needed,Numeric
+1227,mod_des_10_8,Modification 10: Sustainability - anything to improve the longevity of the facil,Numeric
+1228,mod_des_10_9,Modification 10: Compliance to meet health & safety requirements,Numeric
+1229,mod_des_10_10,Modification 10: Compliance to meet environmental requirements,Numeric
+1230,mod_des_10_11,Modification 10: Compliance to meet disability access requirements (local or int,Numeric
+1231,mod_des_10_12,Modification 10: Other requirements,Numeric
+1232,mod_des_10_13,"Modification 10: Other, Specify",Numeric
+1233,mod_des_10_13_oe,MOD_DES_10_13_OE,String
+1234,mod_des_10_96,Modification 10: Don't know,Numeric
+1235,mod_value_10,What was the value of modification?,double
+1236,mod_des_11,For modification please tell us if modification 11 covered any of the following ,Numeric
+1237,mod_des_11_1,Modification 11: Increase in quantity delivered/requested,Numeric
+1238,mod_des_11_2,Modification 11: Decrease in quantity delivered/requested,Numeric
+1239,mod_des_11_3,Modification 11: Increase in capacity delivered/requested,Numeric
+1240,mod_des_11_4,Modification 11: Decrease in capacity delivered/requested,Numeric
+1241,mod_des_11_5,Modification 11: Schedule extended,Numeric
+1242,mod_des_11_6,Modification 11: Schedule shortenend,Numeric
+1243,mod_des_11_7,Modification 11: Rework needed,Numeric
+1244,mod_des_11_8,Modification 11: Sustainability - anything to improve the longevity of the facil,Numeric
+1245,mod_des_11_9,Modification 11: Compliance to meet health & safety requirements,Numeric
+1246,mod_des_11_10,Modification 11: Compliance to meet environmental requirements,Numeric
+1247,mod_des_11_11,Modification 11: Compliance to meet disability access requirements (local or int,Numeric
+1248,mod_des_11_12,Modification 11: Other requirements,Numeric
+1249,mod_des_11_13,"Modification 11: Other, Specify",Numeric
+1250,mod_des_11_13_oe,MOD_DES_11_13_OE,String
+1251,mod_des_11_96,Modification 11: Don't know,Numeric
+1252,mod_value_11,What was the value of modification?,long
+1253,mod_des_12,For modification please tell us if modification 12 covered any of the following ,Numeric
+1254,mod_des_12_1,Modification 12: Increase in quantity delivered/requested,Numeric
+1255,mod_des_12_2,Modification 12: Decrease in quantity delivered/requested,Numeric
+1256,mod_des_12_3,Modification 12: Increase in capacity delivered/requested,Numeric
+1257,mod_des_12_4,Modification 12: Decrease in capacity delivered/requested,Numeric
+1258,mod_des_12_5,Modification 12: Schedule extended,Numeric
+1259,mod_des_12_6,Modification 12: Schedule shortenend,Numeric
+1260,mod_des_12_7,Modification 12: Rework needed,Numeric
+1261,mod_des_12_8,Modification 12: Sustainability - anything to improve the longevity of the facil,Numeric
+1262,mod_des_12_9,Modification 12: Compliance to meet health & safety requirements,Numeric
+1263,mod_des_12_10,Modification 12: Compliance to meet environmental requirements,Numeric
+1264,mod_des_12_11,Modification 12: Compliance to meet disability access requirements (local or int,Numeric
+1265,mod_des_12_12,Modification 12: Other requirements,Numeric
+1266,mod_des_12_13,"Modification 12: Other, Specify",Numeric
+1267,mod_des_12_13_oe,MOD_DES_12_13_OE,String
+1268,mod_des_12_96,Modification 12: Don't know,Numeric
+1269,mod_value_12,What was the value of modification?,double
+1270,mod_des_13,For modification please tell us if modification 13 covered any of the following ,Numeric
+1271,mod_des_13_1,Modification 13: Increase in quantity delivered/requested,Numeric
+1272,mod_des_13_2,Modification 13: Decrease in quantity delivered/requested,Numeric
+1273,mod_des_13_3,Modification 13: Increase in capacity delivered/requested,Numeric
+1274,mod_des_13_4,Modification 13: Decrease in capacity delivered/requested,Numeric
+1275,mod_des_13_5,Modification 13: Schedule extended,Numeric
+1276,mod_des_13_6,Modification 13: Schedule shortenend,Numeric
+1277,mod_des_13_7,Modification 13: Rework needed,Numeric
+1278,mod_des_13_8,Modification 13: Sustainability - anything to improve the longevity of the facil,Numeric
+1279,mod_des_13_9,Modification 13: Compliance to meet health & safety requirements,Numeric
+1280,mod_des_13_10,Modification 13: Compliance to meet environmental requirements,Numeric
+1281,mod_des_13_11,Modification 13: Compliance to meet disability access requirements (local or int,Numeric
+1282,mod_des_13_12,Modification 13: Other requirements,Numeric
+1283,mod_des_13_13,"Modification 13: Other, Specify",Numeric
+1284,mod_des_13_13_oe,MOD_DES_13_13_OE,String
+1285,mod_des_13_96,Modification 13: Don't know,Numeric
+1286,mod_value_13,What was the value of modification?,long
+1287,mod_des_14,For modification please tell us if modification 14 covered any of the following ,Numeric
+1288,mod_des_14_1,Modification 14: Increase in quantity delivered/requested,Numeric
+1289,mod_des_14_2,Modification 14: Decrease in quantity delivered/requested,Numeric
+1290,mod_des_14_3,Modification 14: Increase in capacity delivered/requested,Numeric
+1291,mod_des_14_4,Modification 14: Decrease in capacity delivered/requested,Numeric
+1292,mod_des_14_5,Modification 14: Schedule extended,Numeric
+1293,mod_des_14_6,Modification 14: Schedule shortenend,Numeric
+1294,mod_des_14_7,Modification 14: Rework needed,Numeric
+1295,mod_des_14_8,Modification 14: Sustainability - anything to improve the longevity of the facil,Numeric
+1296,mod_des_14_9,Modification 14: Compliance to meet health & safety requirements,Numeric
+1297,mod_des_14_10,Modification 14: Compliance to meet environmental requirements,Numeric
+1298,mod_des_14_11,Modification 14: Compliance to meet disability access requirements (local or int,Numeric
+1299,mod_des_14_12,Modification 14: Other requirements,Numeric
+1300,mod_des_14_13,"Modification 14: Other, Specify",Numeric
+1301,mod_des_14_13_oe,MOD_DES_14_13_OE,String
+1302,mod_des_14_96,Modification 14: Don't know,Numeric
+1303,mod_value_14,What was the value of modification?,Integer
+1304,mod_des_15,For modification please tell us if modification 15 covered any of the following ,Numeric
+1305,mod_des_15_1,Modification 15: Increase in quantity delivered/requested,Numeric
+1306,mod_des_15_2,Modification 15: Decrease in quantity delivered/requested,Numeric
+1307,mod_des_15_3,Modification 15: Increase in capacity delivered/requested,Numeric
+1308,mod_des_15_4,Modification 15: Decrease in capacity delivered/requested,Numeric
+1309,mod_des_15_5,Modification 15: Schedule extended,Numeric
+1310,mod_des_15_6,Modification 15: Schedule shortenend,Numeric
+1311,mod_des_15_7,Modification 15: Rework needed,Numeric
+1312,mod_des_15_8,Modification 15: Sustainability - anything to improve the longevity of the facil,Numeric
+1313,mod_des_15_9,Modification 15: Compliance to meet health & safety requirements,Numeric
+1314,mod_des_15_10,Modification 15: Compliance to meet environmental requirements,Numeric
+1315,mod_des_15_11,Modification 15: Compliance to meet disability access requirements (local or int,Numeric
+1316,mod_des_15_12,Modification 15: Other requirements,Numeric
+1317,mod_des_15_13,"Modification 15: Other, Specify",Numeric
+1318,mod_des_15_13_oe,MOD_DES_15_13_OE,String
+1319,mod_des_15_96,Modification 15: Don't know,Numeric
+1320,mod_value_15,What was the value of modification?,long
+1321,mod_des_16,For modification please tell us if modification 16 covered any of the following ,Numeric
+1322,mod_des_16_1,Modification 16: Increase in quantity delivered/requested,Numeric
+1323,mod_des_16_2,Modification 16: Decrease in quantity delivered/requested,Numeric
+1324,mod_des_16_3,Modification 16: Increase in capacity delivered/requested,Numeric
+1325,mod_des_16_4,Modification 16: Decrease in capacity delivered/requested,Numeric
+1326,mod_des_16_5,Modification 16: Schedule extended,Numeric
+1327,mod_des_16_6,Modification 16: Schedule shortenend,Numeric
+1328,mod_des_16_7,Modification 16: Rework needed,Numeric
+1329,mod_des_16_8,Modification 16: Sustainability - anything to improve the longevity of the facil,Numeric
+1330,mod_des_16_9,Modification 16: Compliance to meet health & safety requirements,Numeric
+1331,mod_des_16_10,Modification 16: Compliance to meet environmental requirements,Numeric
+1332,mod_des_16_11,Modification 16: Compliance to meet disability access requirements (local or int,Numeric
+1333,mod_des_16_12,Modification 16: Other requirements,Numeric
+1334,mod_des_16_13,"Modification 16: Other, Specify",Numeric
+1335,mod_des_16_13_oe,MOD_DES_16_13_OE,String
+1336,mod_des_16_96,Modification 16: Don't know,Numeric
+1337,mod_value_16,What was the value of modification?,Numeric
+1338,mod_des_17,For modification please tell us if modification 17 covered any of the following ,Numeric
+1339,mod_des_17_1,Modification 17: Increase in quantity delivered/requested,Numeric
+1340,mod_des_17_2,Modification 17: Decrease in quantity delivered/requested,Numeric
+1341,mod_des_17_3,Modification 17: Increase in capacity delivered/requested,Numeric
+1342,mod_des_17_4,Modification 17: Decrease in capacity delivered/requested,Numeric
+1343,mod_des_17_5,Modification 17: Schedule extended,Numeric
+1344,mod_des_17_6,Modification 17: Schedule shortenend,Numeric
+1345,mod_des_17_7,Modification 17: Rework needed,Numeric
+1346,mod_des_17_8,Modification 17: Sustainability - anything to improve the longevity of the facil,Numeric
+1347,mod_des_17_9,Modification 17: Compliance to meet health & safety requirements,Numeric
+1348,mod_des_17_10,Modification 17: Compliance to meet environmental requirements,Numeric
+1349,mod_des_17_11,Modification 17: Compliance to meet disability access requirements (local or int,Numeric
+1350,mod_des_17_12,Modification 17: Other requirements,Numeric
+1351,mod_des_17_13,"Modification 17: Other, Specify",Numeric
+1352,mod_des_17_13_oe,MOD_DES_17_13_OE,String
+1353,mod_des_17_96,Modification 17: Don't know,Numeric
+1354,mod_value_17,What was the value of modification?,long
+1355,mod_des_18,For modification please tell us if modification 18 covered any of the following ,Numeric
+1356,mod_des_18_1,Modification 18: Increase in quantity delivered/requested,Numeric
+1357,mod_des_18_2,Modification 18: Decrease in quantity delivered/requested,Numeric
+1358,mod_des_18_3,Modification 18: Increase in capacity delivered/requested,Numeric
+1359,mod_des_18_4,Modification 18: Decrease in capacity delivered/requested,Numeric
+1360,mod_des_18_5,Modification 18: Schedule extended,Numeric
+1361,mod_des_18_6,Modification 18: Schedule shortenend,Numeric
+1362,mod_des_18_7,Modification 18: Rework needed,Numeric
+1363,mod_des_18_8,Modification 18: Sustainability - anything to improve the longevity of the facil,Numeric
+1364,mod_des_18_9,Modification 18: Compliance to meet health & safety requirements,Numeric
+1365,mod_des_18_10,Modification 18: Compliance to meet environmental requirements,Numeric
+1366,mod_des_18_11,Modification 18: Compliance to meet disability access requirements (local or int,Numeric
+1367,mod_des_18_12,Modification 18: Other requirements,Numeric
+1368,mod_des_18_13,"Modification 18: Other, Specify",Numeric
+1369,mod_des_18_13_oe,MOD_DES_18_13_OE,String
+1370,mod_des_18_96,Modification 18: Don't know,Numeric
+1371,mod_value_18,What was the value of modification?,long
+1372,mod_des_19,For modification please tell us if modification 19 covered any of the following ,Numeric
+1373,mod_des_19_1,Modification 19: Increase in quantity delivered/requested,Numeric
+1374,mod_des_19_2,Modification 19: Decrease in quantity delivered/requested,Numeric
+1375,mod_des_19_3,Modification 19: Increase in capacity delivered/requested,Numeric
+1376,mod_des_19_4,Modification 19: Decrease in capacity delivered/requested,Numeric
+1377,mod_des_19_5,Modification 19: Schedule extended,Numeric
+1378,mod_des_19_6,Modification 19: Schedule shortenend,Numeric
+1379,mod_des_19_7,Modification 19: Rework needed,Numeric
+1380,mod_des_19_8,Modification 19: Sustainability - anything to improve the longevity of the facil,Numeric
+1381,mod_des_19_9,Modification 19: Compliance to meet health & safety requirements,Numeric
+1382,mod_des_19_10,Modification 19: Compliance to meet environmental requirements,Numeric
+1383,mod_des_19_11,Modification 19: Compliance to meet disability access requirements (local or int,Numeric
+1384,mod_des_19_12,Modification 19: Other requirements,Numeric
+1385,mod_des_19_13,"Modification 19: Other, Specify",Numeric
+1386,mod_des_19_13_oe,MOD_DES_19_13_OE,String
+1387,mod_des_19_96,Modification 19: Don't know,Numeric
+1388,mod_value_19,What was the value of modification?,Numeric
+1389,mod_des_20,For modification please tell us if modification 20 covered any of the following ,Numeric
+1390,mod_des_20_1,Modification 20: Increase in quantity delivered/requested,Numeric
+1391,mod_des_20_2,Modification 20: Decrease in quantity delivered/requested,Numeric
+1392,mod_des_20_3,Modification 20: Increase in capacity delivered/requested,Numeric
+1393,mod_des_20_4,Modification 20: Decrease in capacity delivered/requested,Numeric
+1394,mod_des_20_5,Modification 20: Schedule extended,Numeric
+1395,mod_des_20_6,Modification 20: Schedule shortenend,Numeric
+1396,mod_des_20_7,Modification 20: Rework needed,Numeric
+1397,mod_des_20_8,Modification 20: Sustainability - anything to improve the longevity of the facil,Numeric
+1398,mod_des_20_9,Modification 20: Compliance to meet health & safety requirements,Numeric
+1399,mod_des_20_10,Modification 20: Compliance to meet environmental requirements,Numeric
+1400,mod_des_20_11,Modification 20: Compliance to meet disability access requirements (local or int,Numeric
+1401,mod_des_20_12,Modification 20: Other requirements,Numeric
+1402,mod_des_20_13,"Modification 20: Other, Specify",Numeric
+1403,mod_des_20_13_oe,MOD_DES_20_13_OE,String
+1404,mod_des_20_96,Modification 20: Don't know,Numeric
+1405,mod_value_20,What was the value of modification?,Numeric
+1406,mod_des_21,For modification please tell us if modification 21 covered any of the following ,Numeric
+1407,mod_des_21_1,Modification 21: Increase in quantity delivered/requested,Numeric
+1408,mod_des_21_2,Modification 21: Decrease in quantity delivered/requested,Numeric
+1409,mod_des_21_3,Modification 21: Increase in capacity delivered/requested,Numeric
+1410,mod_des_21_4,Modification 21: Decrease in capacity delivered/requested,Numeric
+1411,mod_des_21_5,Modification 21: Schedule extended,Numeric
+1412,mod_des_21_6,Modification 21: Schedule shortenend,Numeric
+1413,mod_des_21_7,Modification 21: Rework needed,Numeric
+1414,mod_des_21_8,Modification 21: Sustainability - anything to improve the longevity of the facil,Numeric
+1415,mod_des_21_9,Modification 21: Compliance to meet health & safety requirements,Numeric
+1416,mod_des_21_10,Modification 21: Compliance to meet environmental requirements,Numeric
+1417,mod_des_21_11,Modification 21: Compliance to meet disability access requirements (local or int,Numeric
+1418,mod_des_21_12,Modification 21: Other requirements,Numeric
+1419,mod_des_21_13,"Modification 21: Other, Specify",Numeric
+1420,mod_des_21_13_oe,MOD_DES_21_13_OE,String
+1421,mod_des_21_96,Modification 21: Don't know,Numeric
+1422,mod_value_21,What was the value of modification?,long
+1423,mod_des_22,For modification please tell us if modification 22 covered any of the following ,Numeric
+1424,mod_des_22_1,Modification 22: Increase in quantity delivered/requested,Numeric
+1425,mod_des_22_2,Modification 22: Decrease in quantity delivered/requested,Numeric
+1426,mod_des_22_3,Modification 22: Increase in capacity delivered/requested,Numeric
+1427,mod_des_22_4,Modification 22: Decrease in capacity delivered/requested,Numeric
+1428,mod_des_22_5,Modification 22: Schedule extended,Numeric
+1429,mod_des_22_6,Modification 22: Schedule shortenend,Numeric
+1430,mod_des_22_7,Modification 22: Rework needed,Numeric
+1431,mod_des_22_8,Modification 22: Sustainability - anything to improve the longevity of the facil,Numeric
+1432,mod_des_22_9,Modification 22: Compliance to meet health & safety requirements,Numeric
+1433,mod_des_22_10,Modification 22: Compliance to meet environmental requirements,Numeric
+1434,mod_des_22_11,Modification 22: Compliance to meet disability access requirements (local or int,Numeric
+1435,mod_des_22_12,Modification 22: Other requirements,Numeric
+1436,mod_des_22_13,"Modification 22: Other, Specify",Numeric
+1437,mod_des_22_13_oe,MOD_DES_22_13_OE,String
+1438,mod_des_22_96,Modification 22: Don't know,Numeric
+1439,mod_value_22,What was the value of modification?,Numeric
+1440,mod_des_23,For modification please tell us if modification 23 covered any of the following ,Numeric
+1441,mod_des_23_1,Modification 23: Increase in quantity delivered/requested,Numeric
+1442,mod_des_23_2,Modification 23: Decrease in quantity delivered/requested,Numeric
+1443,mod_des_23_3,Modification 23: Increase in capacity delivered/requested,Numeric
+1444,mod_des_23_4,Modification 23: Decrease in capacity delivered/requested,Numeric
+1445,mod_des_23_5,Modification 23: Schedule extended,Numeric
+1446,mod_des_23_6,Modification 23: Schedule shortenend,Numeric
+1447,mod_des_23_7,Modification 23: Rework needed,Numeric
+1448,mod_des_23_8,Modification 23: Sustainability - anything to improve the longevity of the facil,Numeric
+1449,mod_des_23_9,Modification 23: Compliance to meet health & safety requirements,Numeric
+1450,mod_des_23_10,Modification 23: Compliance to meet environmental requirements,Numeric
+1451,mod_des_23_11,Modification 23: Compliance to meet disability access requirements (local or int,Numeric
+1452,mod_des_23_12,Modification 23: Other requirements,Numeric
+1453,mod_des_23_13,"Modification 23: Other, Specify",Numeric
+1454,mod_des_23_13_oe,MOD_DES_23_13_OE,String
+1455,mod_des_23_96,Modification 23: Don't know,Numeric
+1456,mod_value_23,What was the value of modification?,Numeric
+1457,mod_des_24,For modification please tell us if modification 24 covered any of the following ,Numeric
+1458,mod_des_24_1,Modification 24: Increase in quantity delivered/requested,Numeric
+1459,mod_des_24_2,Modification 24: Decrease in quantity delivered/requested,Numeric
+1460,mod_des_24_3,Modification 24: Increase in capacity delivered/requested,Numeric
+1461,mod_des_24_4,Modification 24: Decrease in capacity delivered/requested,Numeric
+1462,mod_des_24_5,Modification 24: Schedule extended,Numeric
+1463,mod_des_24_6,Modification 24: Schedule shortenend,Numeric
+1464,mod_des_24_7,Modification 24: Rework needed,Numeric
+1465,mod_des_24_8,Modification 24: Sustainability - anything to improve the longevity of the facil,Numeric
+1466,mod_des_24_9,Modification 24: Compliance to meet health & safety requirements,Numeric
+1467,mod_des_24_10,Modification 24: Compliance to meet environmental requirements,Numeric
+1468,mod_des_24_11,Modification 24: Compliance to meet disability access requirements (local or int,Numeric
+1469,mod_des_24_12,Modification 24: Other requirements,Numeric
+1470,mod_des_24_13,"Modification 24: Other, Specify",Numeric
+1471,mod_des_24_13_oe,MOD_DES_24_13_OE,String
+1472,mod_des_24_96,Modification 24: Don't know,Numeric
+1473,mod_value_24,What was the value of modification?,Numeric
+1474,mod_des_25,For modification please tell us if modification 25 covered any of the following ,Numeric
+1475,mod_des_25_1,Modification 25: Increase in quantity delivered/requested,Numeric
+1476,mod_des_25_2,Modification 25: Decrease in quantity delivered/requested,Numeric
+1477,mod_des_25_3,Modification 25: Increase in capacity delivered/requested,Numeric
+1478,mod_des_25_4,Modification 25: Decrease in capacity delivered/requested,Numeric
+1479,mod_des_25_5,Modification 25: Schedule extended,Numeric
+1480,mod_des_25_6,Modification 25: Schedule shortenend,Numeric
+1481,mod_des_25_7,Modification 25: Rework needed,Numeric
+1482,mod_des_25_8,Modification 25: Sustainability - anything to improve the longevity of the facil,Numeric
+1483,mod_des_25_9,Modification 25: Compliance to meet health & safety requirements,Numeric
+1484,mod_des_25_10,Modification 25: Compliance to meet environmental requirements,Numeric
+1485,mod_des_25_11,Modification 25: Compliance to meet disability access requirements (local or int,Numeric
+1486,mod_des_25_12,Modification 25: Other requirements,Numeric
+1487,mod_des_25_13,"Modification 25: Other, Specify",Numeric
+1488,mod_des_25_13_oe,MOD_DES_25_13_OE,String
+1489,mod_des_25_96,Modification 25: Don't know,Numeric
+1490,mod_value_25,What was the value of modification?,Numeric
+1491,mod_des_26,For modification please tell us if modification 26 covered any of the following ,Numeric
+1492,mod_des_26_1,Modification 26: Increase in quantity delivered/requested,Numeric
+1493,mod_des_26_2,Modification 26: Decrease in quantity delivered/requested,Numeric
+1494,mod_des_26_3,Modification 26: Increase in capacity delivered/requested,Numeric
+1495,mod_des_26_4,Modification 26: Decrease in capacity delivered/requested,Numeric
+1496,mod_des_26_5,Modification 26: Schedule extended,Numeric
+1497,mod_des_26_6,Modification 26: Schedule shortenend,Numeric
+1498,mod_des_26_7,Modification 26: Rework needed,Numeric
+1499,mod_des_26_8,Modification 26: Sustainability - anything to improve the longevity of the facil,Numeric
+1500,mod_des_26_9,Modification 26: Compliance to meet health & safety requirements,Numeric
+1501,mod_des_26_10,Modification 26: Compliance to meet environmental requirements,Numeric
+1502,mod_des_26_11,Modification 26: Compliance to meet disability access requirements (local or int,Numeric
+1503,mod_des_26_12,Modification 26: Other requirements,Numeric
+1504,mod_des_26_13,"Modification 26: Other, Specify",Numeric
+1505,mod_des_26_13_oe,MOD_DES_26_13_OE,String
+1506,mod_des_26_96,Modification 26: Don't know,Numeric
+1507,mod_value_26,What was the value of modification?,Numeric
+1508,mod_des_27,For modification please tell us if modification 27 covered any of the following ,Numeric
+1509,mod_des_27_1,Modification 27: Increase in quantity delivered/requested,Numeric
+1510,mod_des_27_2,Modification 27: Decrease in quantity delivered/requested,Numeric
+1511,mod_des_27_3,Modification 27: Increase in capacity delivered/requested,Numeric
+1512,mod_des_27_4,Modification 27: Decrease in capacity delivered/requested,Numeric
+1513,mod_des_27_5,Modification 27: Schedule extended,Numeric
+1514,mod_des_27_6,Modification 27: Schedule shortenend,Numeric
+1515,mod_des_27_7,Modification 27: Rework needed,Numeric
+1516,mod_des_27_8,Modification 27: Sustainability - anything to improve the longevity of the facil,Numeric
+1517,mod_des_27_9,Modification 27: Compliance to meet health & safety requirements,Numeric
+1518,mod_des_27_10,Modification 27: Compliance to meet environmental requirements,Numeric
+1519,mod_des_27_11,Modification 27: Compliance to meet disability access requirements (local or int,Numeric
+1520,mod_des_27_12,Modification 27: Other requirements,Numeric
+1521,mod_des_27_13,"Modification 27: Other, Specify",Numeric
+1522,mod_des_27_13_oe,MOD_DES_27_13_OE,String
+1523,mod_des_27_96,Modification 27: Don't know,Numeric
+1524,mod_value_27,What was the value of modification?,Numeric
+1525,mod_des_28,For modification please tell us if modification 28 covered any of the following ,Numeric
+1526,mod_des_28_1,Modification 28: Increase in quantity delivered/requested,Numeric
+1527,mod_des_28_2,Modification 28: Decrease in quantity delivered/requested,Numeric
+1528,mod_des_28_3,Modification 28: Increase in capacity delivered/requested,Numeric
+1529,mod_des_28_4,Modification 28: Decrease in capacity delivered/requested,Numeric
+1530,mod_des_28_5,Modification 28: Schedule extended,Numeric
+1531,mod_des_28_6,Modification 28: Schedule shortenend,Numeric
+1532,mod_des_28_7,Modification 28: Rework needed,Numeric
+1533,mod_des_28_8,Modification 28: Sustainability - anything to improve the longevity of the facil,Numeric
+1534,mod_des_28_9,Modification 28: Compliance to meet health & safety requirements,Numeric
+1535,mod_des_28_10,Modification 28: Compliance to meet environmental requirements,Numeric
+1536,mod_des_28_11,Modification 28: Compliance to meet disability access requirements (local or int,Numeric
+1537,mod_des_28_12,Modification 28: Other requirements,Numeric
+1538,mod_des_28_13,"Modification 28: Other, Specify",Numeric
+1539,mod_des_28_13_oe,MOD_DES_28_13_OE,String
+1540,mod_des_28_96,Modification 28: Don't know,Numeric
+1541,mod_value_28,What was the value of modification?,long
+1542,mod_des_29,For modification please tell us if modification 29 covered any of the following ,Numeric
+1543,mod_des_29_1,Modification 29: Increase in quantity delivered/requested,Numeric
+1544,mod_des_29_2,Modification 29: Decrease in quantity delivered/requested,Numeric
+1545,mod_des_29_3,Modification 29: Increase in capacity delivered/requested,Numeric
+1546,mod_des_29_4,Modification 29: Decrease in capacity delivered/requested,Numeric
+1547,mod_des_29_5,Modification 29: Schedule extended,Numeric
+1548,mod_des_29_6,Modification 29: Schedule shortenend,Numeric
+1549,mod_des_29_7,Modification 29: Rework needed,Numeric
+1550,mod_des_29_8,Modification 29: Sustainability - anything to improve the longevity of the facil,Numeric
+1551,mod_des_29_9,Modification 29: Compliance to meet health & safety requirements,Numeric
+1552,mod_des_29_10,Modification 29: Compliance to meet environmental requirements,Numeric
+1553,mod_des_29_11,Modification 29: Compliance to meet disability access requirements (local or int,Numeric
+1554,mod_des_29_12,Modification 29: Other requirements,Numeric
+1555,mod_des_29_13,"Modification 29: Other, Specify",Numeric
+1556,mod_des_29_13_oe,MOD_DES_29_13_OE,String
+1557,mod_des_29_96,Modification 29: Don't know,Numeric
+1558,mod_value_29,What was the value of modification?,long
+1559,mod_des_30,For modification please tell us if modification 30 covered any of the following ,Numeric
+1560,mod_des_30_1,Modification 30: Increase in quantity delivered/requested,Numeric
+1561,mod_des_30_2,Modification 30: Decrease in quantity delivered/requested,Numeric
+1562,mod_des_30_3,Modification 30: Increase in capacity delivered/requested,Numeric
+1563,mod_des_30_4,Modification 30: Decrease in capacity delivered/requested,Numeric
+1564,mod_des_30_5,Modification 30: Schedule extended,Numeric
+1565,mod_des_30_6,Modification 30: Schedule shortenend,Numeric
+1566,mod_des_30_7,Modification 30: Rework needed,Numeric
+1567,mod_des_30_8,Modification 30: Sustainability - anything to improve the longevity of the facil,Numeric
+1568,mod_des_30_9,Modification 30: Compliance to meet health & safety requirements,Numeric
+1569,mod_des_30_10,Modification 30: Compliance to meet environmental requirements,Numeric
+1570,mod_des_30_11,Modification 30: Compliance to meet disability access requirements (local or int,Numeric
+1571,mod_des_30_12,Modification 30: Other requirements,Numeric
+1572,mod_des_30_13,"Modification 30: Other, Specify",Numeric
+1573,mod_des_30_13_oe,MOD_DES_30_13_OE,String
+1574,mod_des_30_96,Modification 30: Don't know,Numeric
+1575,mod_value_30,What was the value of modification?,long
+1576,mod_des_31,For modification please tell us if modification 31 covered any of the following ,Numeric
+1577,mod_des_31_1,Modification 31: Increase in quantity delivered/requested,Numeric
+1578,mod_des_31_2,Modification 31: Decrease in quantity delivered/requested,Numeric
+1579,mod_des_31_3,Modification 31: Increase in capacity delivered/requested,Numeric
+1580,mod_des_31_4,Modification 31: Decrease in capacity delivered/requested,Numeric
+1581,mod_des_31_5,Modification 31: Schedule extended,Numeric
+1582,mod_des_31_6,Modification 31: Schedule shortenend,Numeric
+1583,mod_des_31_7,Modification 31: Rework needed,Numeric
+1584,mod_des_31_8,Modification 31: Sustainability - anything to improve the longevity of the facil,Numeric
+1585,mod_des_31_9,Modification 31: Compliance to meet health & safety requirements,Numeric
+1586,mod_des_31_10,Modification 31: Compliance to meet environmental requirements,Numeric
+1587,mod_des_31_11,Modification 31: Compliance to meet disability access requirements (local or int,Numeric
+1588,mod_des_31_12,Modification 31: Other requirements,Numeric
+1589,mod_des_31_13,"Modification 31: Other, Specify",Numeric
+1590,mod_des_31_13_oe,MOD_DES_31_13_OE,String
+1591,mod_des_31_96,Modification 31: Don't know,Numeric
+1592,mod_value_31,What was the value of modification?,long
+1596,cont_end_reason,"If the end date was modified, which of these external factors below contributed ",Integer
+1597,cont_end_reason_1,Natural disasters,Numeric
+1598,cont_end_reason_2,Weather-related delays,Numeric
+1599,cont_end_reason_3,Materials shortages,Numeric
+1600,cont_end_reason_4,Permits,Numeric
+1601,cont_end_reason_5,Skilled labor shortages,Numeric
+1602,cont_end_reason_6,Fuel shortages,Numeric
+1603,cont_end_reason_7,Elections,Numeric
+1604,cont_end_reason_8,Political unrest/demonstrations,Numeric
+1605,cont_end_reason_9,Labor unrest/strikes,Numeric
+1606,cont_end_reason_10,Local insurgency,Numeric
+1607,cont_end_reason_11,Other security concerns,Numeric
+1608,cont_end_reason_12,Reduced donor financing,Numeric
+1609,cont_end_reason_13,USAID specific requirements,Numeric
+1610,cont_end_reason_14,Other USG requirements,Numeric
+1611,cont_end_reason_15,"Other, Specify",Numeric
+1612,cont_end_reason_15_oe,CONT_END_REASON_15_OE,String
+1613,cont_end_reason_16,No factors external to the award contributed to the award end date being modifie,Numeric
+1617,amend_fin_budg_oe,AMEND_FIN_BUDG_OE,double
+1621,fin_const_amt_oe,FIN_CONST_AMT_OE,double
+1622,fin_const_reason,Which of these external factors below contributed to the amount budgeted within ,Integer
+1623,fin_const_reason_1,Natural disasters,Numeric
+1624,fin_const_reason_2,Permits,Numeric
+1625,fin_const_reason_3,General price inflation,Numeric
+1626,fin_const_reason_4,Building material cost increases,Numeric
+1627,fin_const_reason_5,Skilled labor wage increases,Numeric
+1628,fin_const_reason_6,Fuel cost increases,Numeric
+1629,fin_const_reason_7,Weather-related delays,Numeric
+1630,fin_const_reason_8,Elections,Numeric
+1631,fin_const_reason_9,Political unrest/demonstrations,Numeric
+1632,fin_const_reason_10,Labor unrest/strikes,Numeric
+1633,fin_const_reason_11,Local insurgency,Numeric
+1634,fin_const_reason_12,Other security concerns,Numeric
+1635,fin_const_reason_14,USAID specific requirements,Numeric
+1636,fin_const_reason_15,Other USG requirements,Numeric
+1637,fin_const_reason_16,"Other, Specify",Numeric
+1638,fin_const_reason_16_oe,FIN_CONST_REASON_16_OE,String
+1639,fin_const_reason_17,No factors external to the award contributed to the award end date being modifie,Numeric
+1640,fin_const_reason_13,Reduced donor financing,Numeric
+1645,claimno1,Please tell us the total number of claims.,Integer
+1646,claimamt1,Please tell us the total amount (USD).,double
+1651,claimno2,Please tell us the total number of pending claims.,Integer
+1652,claimamt2,Please tell us the total amount (USD).,long
+1656,co_no_oe,CO_NO_OE,String
+1660,co_sup_per_start_oe,CO_SUP_PER_START_OE,Integer
+1664,co_sup_per_end_oe,CO_SUP_PER_END_OE,Integer
+1668,co_sitevisit_oe,CO_SITEVISIT_OE,String
+1700,cor_no_oe,COR_NO_OE,Numeric
+1704,cor_sup_per_start_oe,COR_SUP_PER_START_OE,Integer
+1708,cor_sup_per_end_oe,COR_SUP_PER_END_OE,Integer
+1712,cor_sitevisit_oe,COR_SITEVISIT_OE,String
+1750,cor_mgmt_cert_1,PMP (Project Management Professional),Numeric
+1751,cor_mgmt_cert_2,CCM (Certified Construction Manager),Numeric
+1752,cor_mgmt_cert_3,CCC (Certified Cost Consultant),Numeric
+1753,cor_mgmt_cert_4,CCE (Certified Cost Engineer),Numeric
+1754,cor_mgmt_cert_5,Other equivalent certification:,Numeric
+1755,cor_mgmt_cert_5_oe,COR_MGMT_CERT_5_OE,String
+1756,cor_mgmt_cert_6,None,Numeric
+1757,cor_mgmt_cert_96,Don't know,Numeric
+1758,const_doc,Which of the following were provided to the awardee prior to initiation of const,Numeric
+1759,const_doc_1,Design drawings,Numeric
+1760,const_doc_2,IEE (Initial Environmental Evaluation),Numeric
+1761,const_doc_3,Geo-Technical Reports,Numeric
+1762,const_doc_4,CBA (Cost Benefit Analysis),Numeric
+1763,const_doc_5,Environmental Assessment,Numeric
+1764,const_doc_6,Site topographic surveys,Numeric
+1765,const_doc_7,Schedule,Numeric
+1766,const_doc_8,Terms and conditions,Numeric
+1767,const_doc_9,None,Numeric
+1768,const_doc_96,Don't know,Numeric
+1773,doc_prvd_oe,DOC_PRVD_OE,String
+1780,doc_when_oe,DOC_WHEN_OE,String
+1796,rep_freq_co_cor_oe,REP_FREQ_CO_COR_OE,String
+1803,rep_freq_sup_eng_oe,REP_FREQ_SUP_ENG_OE,String
+1804,prog_rep,When reporting for the infrastructure component to USAID or the supervising engi,Integer
+1805,prog_rep_1,Daily site reports,Numeric
+1806,prog_rep_2,Financial status (actual work done and its actual cost),Numeric
+1807,prog_rep_3,Schedule status (actual work completed versus planned work),Numeric
+1808,prog_rep_4,Health and safety record,Numeric
+1809,prog_rep_5,Non-compliance with award,Numeric
+1810,prog_rep_6,Potential delays and cost changes,Numeric
+1811,prog_rep_7,Claims status,Numeric
+1812,prog_rep_8,Issues for Engineer determination,Numeric
+1813,prog_rep_9,Design issues and unforseen conditions,Numeric
+1814,prog_rep_10,QA/QC procedures,Numeric
+1815,prog_rep_11,Forward reporting period work plan,Numeric
+1816,prog_rep_12,Environmental management and monitoring,Numeric
+1817,prog_rep_13,"Other, Specify",Numeric
+1818,prog_rep_13_oe,PROG_REP_13_OE,String
+1819,prog_rep_96,Don't know,Numeric
+1824,num_inci,How many incidents of death or injury were reported during the life of the award,Integer
+1825,inci_des_1,Please describe incident 1 and the severity of injuries.,String
+1826,num_injur_1,Number of injuries in incident 1,Integer
+1827,num_death_1,Number of deaths in incident 1,Integer
+1828,inci_des_2,Please describe incident 2 and the severity of injuries.,String
+1829,num_injur_2,Number of injuries in incident 2,Integer
+1830,num_death_2,Number of deaths in incident 2,Integer
+1831,inci_des_3,Please describe incident 3 and the severity of injuries.,String
+1832,num_injur_3,Number of injuries in incident 3,Integer
+1833,num_death_3,Number of deaths in incident 3,Integer
+1834,inci_des_4,Please describe incident 4 and the severity of injuries.,String
+1835,num_injur_4,Number of injuries in incident 4,Integer
+1836,num_death_4,Number of deaths in incident 4,Integer
+1837,inci_des_5,Please describe incident 5 and the severity of injuries.,String
+1838,num_injur_5,Number of injuries in incident 5,Integer
+1839,num_death_5,Number of deaths in incident 5,Integer
+1840,inci_des_6,Please describe incident 6 and the severity of injuries.,String
+1841,num_injur_6,Number of injuries in incident 6,Integer
+1842,num_death_6,Number of deaths in incident 6,Integer
+1843,inci_des_7,Please describe incident 7 and the severity of injuries.,String
+1844,num_injur_7,Number of injuries in incident 7,Integer
+1845,num_death_7,Number of deaths in incident 7,Integer
+1846,inci_des_8,Please describe incident 8 and the severity of injuries.,String
+1847,num_injur_8,Number of injuries in incident 8,Integer
+1848,num_death_8,Number of deaths in incident 8,Integer
+1849,inci_des_9,Please describe incident 9 and the severity of injuries.,String
+1850,num_injur_9,Number of injuries in incident 9,Integer
+1851,num_death_9,Number of deaths in incident 9,Integer
+1852,inci_des_10,Please describe incident 10 and the severity of injuries.,String
+1853,num_injur_10,Number of injuries in incident 10,Integer
+1854,num_death_10,Number of deaths in incident 10,Integer
+1855,inci_des_11,Please describe incident 11 and the severity of injuries.,String
+1856,num_injur_11,Number of injuries in incident 11,Integer
+1857,num_death_11,Number of deaths in incident 11,Integer
+1862,num_env_inc,How many environmental incidents were reported during the life of the award (i.e,Integer
+1863,env_inc_des_1,Please describe incident 1,String
+1864,env_inc_des_2,Please describe incident 2,String
+1865,env_inc_des_3,Please describe incident 3,String
+1866,env_inc_des_4,Please describe incident 4,String
+1867,eng_approv,"Prior to construction, what documents was the awardee or awardor required to pro",Integer
+1868,eng_approv_1,Detailed Work Plan with implementation schedule,Numeric
+1869,eng_approv_2,Health and Safety Plan,Numeric
+1870,eng_approv_3,Quality Assurance/Quality Control Plan,Numeric
+1871,eng_approv_4,Site-Specific Environmental Management Plan,Numeric
+1872,eng_approv_5,Methods and Materials Statement/Shop drawing,Numeric
+1873,eng_approv_6,Staffing Plan,Numeric
+1874,eng_approv_7,"Other, Specify",Numeric
+1875,eng_approv_7_oe,ENG_APPROV_7_OE,String
+1876,eng_approv_8,None,Numeric
+1899,eng_over_oe,ENG_OVER_OE,String
+1940,con_over_oe,CON_OVER_OE,String
+1953,con_over2_oe,CON_OVER2_OE,String
+1967,matl_test_oe,MATL_TEST_OE,String
+1968,closeout_act,What construction closeout completion activities were completed or are planned? ,Integer
+1969,closeout_act_1,Develop a project commissioning plan and checklist (i.e. equipment inspections a,Numeric
+1970,closeout_act_2,Conduct and monitor project commissioning and start-up,Numeric
+1971,closeout_act_3,Receive project operations manual,Numeric
+1972,closeout_act_4,Receive all equipment warranties and operation manuals,Numeric
+1973,closeout_act_5,Receive and approve all as-built drawings,Numeric
+1974,closeout_act_6,Condcuted detailed turn-over inspection/final inspection and punch-list,Numeric
+1975,closeout_act_7,Receive Certificate of project warranty,Numeric
+1976,closeout_act_8,Receive Certificate of final release of liens and indemnity,Numeric
+1977,closeout_act_9,Provide Official Project Acceptance Letter,Numeric
+1978,closeout_act_10,"Other, Specify",Numeric
+1979,closeout_act_10_oe,CLOSEOUT_ACT_10_OE,String
+1980,closeout_act_96,Don't know,Numeric
+1981,proj_follow,What follow-up activities were conducted in association with the construction po,Integer
+1982,proj_follow_1,Warranty period inspection by USAID,Numeric
+1983,proj_follow_2,Follow up review by implementer,Numeric
+1984,proj_follow_3,Verification of the facility use by beneficiaries,Numeric
+1985,proj_follow_4,Verification of appropriate operational practices and procedures,Numeric
+1986,proj_follow_5,None of the above,Numeric
+0,start,"Will you participate in this survey and complete the questions to the best of yo (0: No, 1: Yes)",Integer
+1,projname_conf,"Is the award name correct? (0: Enter correct award name, 1: Yes)",Integer
+2,award_no_conf,"Is the award number correct? (0: Enter corrected award number, 1: Yes)",Integer
+3,proj_phase,"What phase is the award in? (1: Award/Mobilization, 2: In implementation, 3: Award ended)",Integer
+4,con_phase,"What phase is the construction component of the award in? (Check one only) (1: Award/Mobilization, 2: Under construction, 3: Construction closeout (punch list), 4: Completed)",Integer
+5,country_loc1,"In which country/countries is/was construction work being conducted? (1: Afghanistan, 2: Albania, 3: Angola, 4: Armenia, 5: Azerbaijan, 6: Bangladesh, 7: Barbados, 8: Belarus, 9: Benin, 10: Bolivia, 11: Botswana, 12: Bosnia-Herzegovina, 13: Brazil, 14: Burkina Faso, 15: Burma, 16: Burundi, 17: Cambodia, 18: Colombia, 19: Cote d'Ivoire, 20: Cyprus, 21: Democratic Republic of the Congo, 22: Djibouti, 23: Dominican Republic, 24: East Africa Regional, 25: East Timor, 26: Ecuador, 27: Egypt, 28: El Salvador, 29: Ethiopia, 30: Georgia, 31: Ghana, 32: Guatemala, 33: Guinea and Sierra Leone, 34: Guyana, 35: Haiti, 36: Honduras, 37: Hungary, 38: India, 39: Indonesia, 40: Iraq, 41: Jamaica, 42: Jordan, 43: Kenya, 44: Kosovo, 45: Kyrgyzstan, 46: Lebanon, 47: Liberia, 48: Libya, 49: Macedonia, 50: Madagascar, 51: Malawi, 52: Mali, 53: Mexico, 54: Moldova, 55: Mongolia, 56: Montenegro, 57: Morocco, 58: Mozambique, 59: Namibia, 60: Nepal, 61: Nicaragua, 62: Niger, 63: Nigeria, 64: Pakistan, 65: Panama, 66: Paraguay, 67: Peru, 68: Philippines, 69: Russia, 70: Rwanda, 71: Senegal, 72: Serbia, 73: South Africa, 74: South Sudan, 75: Sri Lanka, 76: Sudan, 77: Tanzania, 78: Tunisia, 79: Uganda, 80: Ukraine, 81: Vietnam, 82: West Bank/Gaza, 83: Yemen, 84: Zambia, 85: Zimbabwe, 86: Ireland, 87: United Kingdom, 88: Turkey, 89: Greece, 90: Bulgaria, 91: Romania, 92: Lithuania, 93: Italy, 94: Czech Republic, 95: Swaziland, 98: Somalia, 99: US)",Integer
+6,country_loc2,"Country 2: (1: Afghanistan, 2: Albania, 3: Angola, 4: Armenia, 5: Azerbaijan, 6: Bangladesh, 7: Barbados, 8: Belarus, 9: Benin, 10: Bolivia, 11: Botswana, 12: Bosnia-Herzegovina, 13: Brazil, 14: Burkina Faso, 15: Burma, 16: Burundi, 17: Cambodia, 18: Colombia, 19: Cote d'Ivoire, 20: Cyprus, 21: Democratic Republic of the Congo, 22: Djibouti, 23: Dominican Republic, 24: East Africa Regional, 25: East Timor, 26: Ecuador, 27: Egypt, 28: El Salvador, 29: Ethiopia, 30: Georgia, 31: Ghana, 32: Guatemala, 33: Guinea and Sierra Leone, 34: Guyana, 35: Haiti, 36: Honduras, 37: Hungary, 38: India, 39: Indonesia, 40: Iraq, 41: Jamaica, 42: Jordan, 43: Kenya, 44: Kosovo, 45: Kyrgyzstan, 46: Lebanon, 47: Liberia, 48: Libya, 49: Macedonia, 50: Madagascar, 51: Malawi, 52: Mali, 53: Mexico, 54: Moldova, 55: Mongolia, 56: Montenegro, 57: Morocco, 58: Mozambique, 59: Namibia, 60: Nepal, 61: Nicaragua, 62: Niger, 63: Nigeria, 64: Pakistan, 65: Panama, 66: Paraguay, 67: Peru, 68: Philippines, 69: Russia, 70: Rwanda, 71: Senegal, 72: Serbia, 73: South Africa, 74: South Sudan, 75: Sri Lanka, 76: Sudan, 77: Tanzania, 78: Tunisia, 79: Uganda, 80: Ukraine, 81: Vietnam, 82: West Bank/Gaza, 83: Yemen, 84: Zambia, 85: Zimbabwe, 86: Ireland, 87: United Kingdom, 88: Turkey, 89: Greece, 90: Bulgaria, 91: Romania, 92: Lithuania, 93: Italy, 94: Czech Republic, 95: Swaziland, 98: Somalia, 99: US)",Integer
+7,country_loc3,"Country 3: (1: Afghanistan, 2: Albania, 3: Angola, 4: Armenia, 5: Azerbaijan, 6: Bangladesh, 7: Barbados, 8: Belarus, 9: Benin, 10: Bolivia, 11: Botswana, 12: Bosnia-Herzegovina, 13: Brazil, 14: Burkina Faso, 15: Burma, 16: Burundi, 17: Cambodia, 18: Colombia, 19: Cote d'Ivoire, 20: Cyprus, 21: Democratic Republic of the Congo, 22: Djibouti, 23: Dominican Republic, 24: East Africa Regional, 25: East Timor, 26: Ecuador, 27: Egypt, 28: El Salvador, 29: Ethiopia, 30: Georgia, 31: Ghana, 32: Guatemala, 33: Guinea and Sierra Leone, 34: Guyana, 35: Haiti, 36: Honduras, 37: Hungary, 38: India, 39: Indonesia, 40: Iraq, 41: Jamaica, 42: Jordan, 43: Kenya, 44: Kosovo, 45: Kyrgyzstan, 46: Lebanon, 47: Liberia, 48: Libya, 49: Macedonia, 50: Madagascar, 51: Malawi, 52: Mali, 53: Mexico, 54: Moldova, 55: Mongolia, 56: Montenegro, 57: Morocco, 58: Mozambique, 59: Namibia, 60: Nepal, 61: Nicaragua, 62: Niger, 63: Nigeria, 64: Pakistan, 65: Panama, 66: Paraguay, 67: Peru, 68: Philippines, 69: Russia, 70: Rwanda, 71: Senegal, 72: Serbia, 73: South Africa, 74: South Sudan, 75: Sri Lanka, 76: Sudan, 77: Tanzania, 78: Tunisia, 79: Uganda, 80: Ukraine, 81: Vietnam, 82: West Bank/Gaza, 83: Yemen, 84: Zambia, 85: Zimbabwe, 86: Ireland, 87: United Kingdom, 88: Turkey, 89: Greece, 90: Bulgaria, 91: Romania, 92: Lithuania, 93: Italy, 94: Czech Republic, 95: Swaziland, 98: Somalia, 99: US)",Integer
+8,country_loc4,"Country 4: (1: Afghanistan, 2: Albania, 3: Angola, 4: Armenia, 5: Azerbaijan, 6: Bangladesh, 7: Barbados, 8: Belarus, 9: Benin, 10: Bolivia, 11: Botswana, 12: Bosnia-Herzegovina, 13: Brazil, 14: Burkina Faso, 15: Burma, 16: Burundi, 17: Cambodia, 18: Colombia, 19: Cote d'Ivoire, 20: Cyprus, 21: Democratic Republic of the Congo, 22: Djibouti, 23: Dominican Republic, 24: East Africa Regional, 25: East Timor, 26: Ecuador, 27: Egypt, 28: El Salvador, 29: Ethiopia, 30: Georgia, 31: Ghana, 32: Guatemala, 33: Guinea and Sierra Leone, 34: Guyana, 35: Haiti, 36: Honduras, 37: Hungary, 38: India, 39: Indonesia, 40: Iraq, 41: Jamaica, 42: Jordan, 43: Kenya, 44: Kosovo, 45: Kyrgyzstan, 46: Lebanon, 47: Liberia, 48: Libya, 49: Macedonia, 50: Madagascar, 51: Malawi, 52: Mali, 53: Mexico, 54: Moldova, 55: Mongolia, 56: Montenegro, 57: Morocco, 58: Mozambique, 59: Namibia, 60: Nepal, 61: Nicaragua, 62: Niger, 63: Nigeria, 64: Pakistan, 65: Panama, 66: Paraguay, 67: Peru, 68: Philippines, 69: Russia, 70: Rwanda, 71: Senegal, 72: Serbia, 73: South Africa, 74: South Sudan, 75: Sri Lanka, 76: Sudan, 77: Tanzania, 78: Tunisia, 79: Uganda, 80: Ukraine, 81: Vietnam, 82: West Bank/Gaza, 83: Yemen, 84: Zambia, 85: Zimbabwe, 86: Ireland, 87: United Kingdom, 88: Turkey, 89: Greece, 90: Bulgaria, 91: Romania, 92: Lithuania, 93: Italy, 94: Czech Republic, 95: Swaziland, 98: Somalia, 99: US)",Integer
+9,country_loc5,"Country 5: (1: Afghanistan, 2: Albania, 3: Angola, 4: Armenia, 5: Azerbaijan, 6: Bangladesh, 7: Barbados, 8: Belarus, 9: Benin, 10: Bolivia, 11: Botswana, 12: Bosnia-Herzegovina, 13: Brazil, 14: Burkina Faso, 15: Burma, 16: Burundi, 17: Cambodia, 18: Colombia, 19: Cote d'Ivoire, 20: Cyprus, 21: Democratic Republic of the Congo, 22: Djibouti, 23: Dominican Republic, 24: East Africa Regional, 25: East Timor, 26: Ecuador, 27: Egypt, 28: El Salvador, 29: Ethiopia, 30: Georgia, 31: Ghana, 32: Guatemala, 33: Guinea and Sierra Leone, 34: Guyana, 35: Haiti, 36: Honduras, 37: Hungary, 38: India, 39: Indonesia, 40: Iraq, 41: Jamaica, 42: Jordan, 43: Kenya, 44: Kosovo, 45: Kyrgyzstan, 46: Lebanon, 47: Liberia, 48: Libya, 49: Macedonia, 50: Madagascar, 51: Malawi, 52: Mali, 53: Mexico, 54: Moldova, 55: Mongolia, 56: Montenegro, 57: Morocco, 58: Mozambique, 59: Namibia, 60: Nepal, 61: Nicaragua, 62: Niger, 63: Nigeria, 64: Pakistan, 65: Panama, 66: Paraguay, 67: Peru, 68: Philippines, 69: Russia, 70: Rwanda, 71: Senegal, 72: Serbia, 73: South Africa, 74: South Sudan, 75: Sri Lanka, 76: Sudan, 77: Tanzania, 78: Tunisia, 79: Uganda, 80: Ukraine, 81: Vietnam, 82: West Bank/Gaza, 83: Yemen, 84: Zambia, 85: Zimbabwe, 86: Ireland, 88: Turkey, 89: Greece, 90: Bulgaria, 91: Romania, 92: Lithuania, 93: Italy, 94: Czech Republic, 95: Swaziland, 97: United Kingdom, 98: Somalia, 99: US)",Integer
+10,sponsoroff,"Is the primary responsible managing party for this award a USAID Mission or a Wa (1: USAID Mission, 2: Washington Operating Unit, 3: Don't know, 4: Other; Specify)",Integer
+11,missionoff,"Which USAID Mission is cognizant (the primary responsible managing entity) for t (1: Angola, 2: Benin, 3: Botswana, 4: Burkina Faso, 5: Burundi, 6: Cote d'Ivoire, 7: Djibouti, 8: Democratic Republic of the Congo, 9: East Africa Regional, 10: Ethiopia, 11: Ghana, 12: Guinea and Sierra Leone, 13: Kenya, 14: Liberia, 15: Madagascar, 16: Malawi, 17: Mali, 18: Mozambique, 19: Namibia, 20: Niger, 21: Nigeria, 22: Rwanda, 23: Senegal, 24: South Africa, 25: Sudan, 26: South Sudan, 27: Tanzania, 28: Uganda, 29: West Africa Regional, 30: Zambia, 31: Zimbabwe, 32: Afghanistan, 33: Bangladesh, 34: Burma, 35: Cambodia, 36: Central Asian Republics Regional, 37: East Timor, 38: India, 39: Indonesia, 40: Kyrgyzstan, 41: Mongolia, 42: Nepal, 43: Pakistan, 44: Philippines, 45: Regional Development Mission-Asia, 46: Sri Lanka, 47: Vietnam, 48: Albania, 49: Armenia, 50: Azerbaijan, 51: Boznia-Herzegovina, 52: Cyprus, 53: Georgia, 54: Hungary, 55: Kosovo, 56: Macedonia, 57: Russia, 58: Serbia and Montenegro, 59: Ukraine, Moldova and Belarus, 60: Bolivia, 61: Brazil, 62: Caribbean Regional Program, 63: Central America Regional Program, 64: Colombia, 65: Dominican Republic, 66: Ecuador, 67: El Salvador, 68: Guatemala, 69: Guyana, 70: Haiti, 71: Honduras, 72: Jamaica, 73: Mexico, 74: Nicaragua, 75: Panama, 76: Paraguay, 77: Peru, 78: Barbados-Eastern Caribbean, 79: Egypt, 80: Iraq, 81: Jordan, 82: Lebanon, 83: Libya, 84: Morocco, 85: Tunisia, 86: West Bank/Gaza, 87: Yemen, 88: Southern Africa Regional)",Numeric
+12,ecd_num,"Is there an Environmental Compliance Data base file number associated with this  (0: No, 1: Yes; ECD number:, 96: Don't know)",Integer
+13,award_mech,"What type of agreement was this award completed under? (1: Direct Contract, 2: Grant (excluding PIO), 3: Public International Organization (PIO) Grant, 4: Cooperative Agreement, 5: Host Country Award, 6: Government-to-Government Agreement, 7: Fixed amount reimbursement agreement (FARA), 8: USG Interagency Agreement, 9: Development Credit Authority Guarantee, 10: Multi-donor funds)",Integer
+14,grnt_cntrct,"Did this direct contract include sub-grants? (0: No, 1: Yes, 96: Don't know)",Numeric
+15,implm_assess,"Prior to receiving USAID financing was the implementing partner's capacity and e (0: No, 1: Yes, 96: Don't know)",Numeric
+16,assess_outcome,"What was the outcome of the assessment? (1: Implementing partner had appropriate capacity, 2: Implementing partner did not have appropriate capacity and needed support)",Integer
+17,enab_env_support,"Has the implementing partner received any type of technical assistance related t (0: No, 1: Yes, 96: Don't know)",Numeric
+18,cap_build,"Other than capacity building in the form of training, did the implementing part (0: No, 1: Yes; type(s) of capacity building provided:, 96: Don't know)",Integer
+19,omfund_avail,"Was availability of operations and maintenance (O&M) funding assessed? (0: No, 1: Yes, by USAID, 2: Yes, by USAID awardee, 3: Yes, by others specify, 96: Don't know)",Numeric
+20,om_outcome,"What was the outcome of the O&M funding assessment? (1: O&M funds will not be available, 2: Some O&M funds will be available, 3: All estimated O&M funds will be available, 96: Don't know)",Integer
+21,cert_use,"Was a certification of the end-users ability to use and maintain the infrastruct (0: No, 1: Yes, 96: Don't know)",Numeric
+22,gender,"Was gender analysis included as part of the planning and design process of the c (0: No, 1: Yes, 96: Don't know)",Numeric
+23,risk_reg,"Did USAID develop a means to identify and track potential issues and risks (i.e. (0: No, 1: Yes, 96: Don't know)",Numeric
+24,gov_consult,"Was the host country government consulted in the design of the infrastructure co (0: No, 1: Yes, 96: Don't know)",Numeric
+25,stkh_consult,"Were non-governmental stakeholders consulted in the design of the infrastructure (0: No, 1: Yes, 96: Don't know)",Integer
+26,site_apprv,"Did USAID receive formal approval for the construction activity site from the go (0: No, 1: Yes, 96: Don't know)",Numeric
+27,secinfra,"Was the construction activity dependent on other infrastructure projects not fun (0: No, 1: Yes, 96: Don't know)",Numeric
+28,crb_rev,"Was the solicitation reviewed by the Contract Review Board (CRB)? (0: No, 1: Yes, 96: Don't know)",Integer
+29,usg_tech,"Were USG officials outside of the implementing mission/bureau involved in direct (0: No, 1: Yes, 96: Don't know)",Numeric
+30,award_std,"Does the USAID award agreement include or require the awardee to use a standard  (0: No, 1: Yes, 96: Don't know)",Integer
+31,award_type,"What was the standard form of award used? (1: FAR-based, 2: FIDIC-based, 3: American Institutes of Architects-based, 4: American General Awards Association-based, 5: Other, Specify)",Integer
+32,far16,"Was the award agreement designed using FAR 16? (0: No, 1: Yes, 96: Don't know)",Integer
+33,contrct_sup,"Did the award include both construction and non-construction activities? (0: No, 1: Yes, 96: Don't know)",Integer
+34,con_noncon,"Was the award predominantly for construction or non-construction activities? (1: Predominantly construction, 2: Predominantly non-construction., 96: Don't know)",Integer
+35,con_divide,"Was the award divided into construction and non-construction parts? (0: No, 1: Yes, 96: Don't know)",Integer
+36,far36_523,"Did the construction part of the award include construction clauses as specified (0: No, 1: Yes, 96: Don't know)",Integer
+37,far36_matrix,"Did the award include construction clauses as specified in FAR Subpart 36.5 and  (0: No, 1: Yes, 96: Don't know)",Integer
+38,far36_53,"Did the award use the forms specified in FAR Subparts 36.7 and 53.2? (0: No, 1: Yes, 96: Don't know)",Integer
+39,dlp,"Does the award include a defects liability period (DLP) or defects notification  (0: No, 1: Yes; enter length of the DLP in days:&nbsp;, 2: Yes; enter length of the DNP in days:, 96: Don't know)",Integer
+40,des_std_award,What design standards were used in the award? Check all that apply. (),Integer
+41,hazard_matl,"Does the award agreement include specifications or clauses addressing the use of (0: No; Explain:, 1: Yes, 96: Don't know)",Integer
+42,seis_des,"Was/Is seismic design included in the design? (0: No, 1: Yes, 96: Don't know)",Integer
+43,seis_cat,"What magnitude seismic design category (International Building Code (IBC) 2000)  (0: Specify units:, 1: Design category (specify units), 96: Don't know)",Integer
+44,hur_des,"Were/Are hurricanes/typhoons a consideration in the design? (0: No, 1: Yes, 96: Don't know)",Integer
+45,flood_des,"Was the potential for flooding taken into consideration during project design? (0: No, 1: Yes, 96: Don't know)",Integer
+46,gov_est,"Was an independent USAID cost estimate of construction activities developed? (0: No, 1: Yes, 96: Don't know)",Numeric
+47,est_prep,"Who prepared the USAID cost estimate? (1: USAID Direct Hire (non-engineer), 2: USAID Direct Hire (engineer), 3: USAID Direct Hire (professsional licensed engineer), 4: FSN (non-engineer), 5: FSN (engineer), 6: FSN (professional licensed engineer), 7: PSC (non-engineer), 8: PSC (engineer), 9: PSC (professional qualified engineer), 10: A&E firm (US), 11: A&E firm (Host Country), 12: A&E firm (Third Country National), 13: Host country government engineer, 14: Other USG Agency (e.g. Army Corps of Engineers), 15: Other, Specify, 96: Don't know)",Integer
+48,est_basis,"What was the basis of the USAID cost estimate? (1: Parametric models (i.e. cost square footage, cost per km, cost per cubic meter of water per day, etc.), 2: Capacity standard (cost/student, cost/hospital bed, etc.), 3: Judgment estimate, 4: Budget authorization/control (Unit Cost Estimate based upon incomplete/limited design), 5: Control/Bid and Tender (Detailed Unit Cost Estimate based upon complete design), 96: Don't know)",Integer
+49,cost_rev,"Who reviewed the USAID cost estimate? (1: USAID Direct Hire (non-engineer), 2: USAID Direct Hire (engineer), 3: USAID Direct Hire (professsional licensed engineer), 4: FSN (non-engineer), 5: FSN (engineer), 6: FSN (professional licensed engineer), 7: PSC (non-engineer), 8: PSC (engineer), 9: PSC (professional qualified engineer), 10: A&E firm (US), 11: A&E firm (Host Country), 12: A&E firm (Third Country National), 13: Host country government engineer, 14: Other USG Agency (e.g. Army Corps of Engineers), 15: Other, Specify, 96: Don't know)",Integer
+50,cor_app,"Did the COR/AOR review and approve the USAID cost estimate? (0: No, 1: Yes, 96: Don't know)",Integer
+51,gov_sched,"Was an acquisition plan developed for this award? (0: No, 1: Yes, 96: Don't know)",Integer
+52,est_sched_prep,"Who developed the acquisition plan? (1: USAID Direct Hire (non-engineer), 2: USAID Direct Hire (engineer), 3: USAID Direct Hire (professsional licensed engineer), 4: FSN (non-engineer), 5: FSN (engineer), 6: FSN (professional licensed engineer), 7: PSC (non-engineer), 8: PSC (engineer), 9: PSC (professional qualified engineer), 10: A&E firm (US), 11: A&E firm (Host Country), 12: A&E firm (Third Country National), 13: Host country government engineer, 14: Other USG Agency (e.g. Army Corps of Engineers), 15: Other, Specify, 96: Don't know)",Integer
+53,usg_inc,"Was value engineering a part of the award as described in FAR 48? (0: No, 1: Yes; Describe, 96: Don't know)",Numeric
+54,cost_ben_analy,"Did the award include cost benefit analysis and/or economic analysis of the prop (0: No, 1: Yes, cost benefit analysis only, 2: Yes, economic analysis only, 3: Yes, both cost benefit analysis and economic analysis, 96: Don't know)",Numeric
+55,return_rate,"What was the economic internal rate of return (EIRR) of the proposed constructio (1: (%), 96: Don't know)",Integer
+56,build_cost,"Did cost benefit analysis/economic analysis consider long term sustainability an (0: No, 1: Yes, 96: Don't know)",Integer
+57,prime_comp,"Which of the following options would best characterize the award competition? (1: Full and open competition, 2: Qualifications-based short list, 3: Limited competition, 4: Sole source, 5: Government-to-government/FARA/donor-to-donor, 96: Don't know)",Integer
+58,prime_stat,"Which of the following best characterizes the awardee? (1: International Construction/Engineering Firm, 2: International Firm (not primarily construction focused), 3: International NGO/PVO, 4: Other international organization (specify), 5: Local Construction/Engineering Firm, 6: Local firm (not primarily construction focused), 7: Local NGO, 8: Other Local organization (specify))",Integer
+59,finstat,"As part of the solicitation process, was the direct awardee required to submit f (0: No, 1: Yes, 96: Don't know)",Integer
+60,bonding,"Was a construction surety bond or other assurance required by the award? (0: No, 1: Yes, 96: Don't know)",Integer
+61,award_amd,"Was the construction component of the award modified? (0: No, 1: Yes, 96: Don't know)",Integer
+62,lic_app,"Who was primarily involved in approving award modifications (other than the CO/C (1: USAID Direct Hire (non-engineer), 2: USAID Direct Hire (engineer), 3: USAID Direct Hire (professsional licensed engineer), 4: FSN (non-engineer), 5: FSN (engineer), 6: FSN (professional licensed engineer), 7: PSC (non-engineer), 8: PSC (engineer), 9: PSC (professional qualified engineer), 10: A&E firm (US), 11: A&E firm (Host Country), 12: A&E firm (Third Country National), 13: Host country government engineer, 14: Other USG Agency (e.g. Army Corps of Engineers), 15: Other, Specify, 96: Don't know)",Numeric
+63,cont_end_amd,"What is the current completion date of the award? Please enter in format MM/YYYY (1: Date:, 96: Don't know)",Integer
+64,amend_fin_budg,"What was the revised award amount after modifications? (1: (USD), 96: Don't know)",Integer
+65,fin_const_amt,"What was the revised amount budgeted within the award for construction activitie (1: (USD), 96: Don't know)",Integer
+66,claims,"Have there been/were there claims by the contractor that were paid? (0: No, 1: Yes, 96: Don't know)",Integer
+67,claimpend,"Are there any pending Contractor claims? (0: No, 1: Yes, 96: Don't know)",Integer
+68,co_no,"Over the life of the award to date, how many Awarding Officers (CO)/Assistance O (0: None, e.g. in the case of G2G agreements, 1: Number of COs/AOs:)",Integer
+69,co_sup_per_start,"What was the start date of the period during which the current/most recent CO/AO (1: Date, 96: Don't know)",Integer
+70,co_sup_per_end,"What was the end date of the period during which the current/most recent CO/AO h (1: Date, 2: The CO's tenure is ongoing)",Integer
+71,co_sitevisit,"Throughout the construction period, on average, how many times annually did the  (1: Average number of site visits annually:, 96: Don't know)",Integer
+72,co_cert,"Did the current/most recent CO/AO receive training in construction and/or A&E co (0: No, 1: Yes, construction only, 2: Yes, A&E only, 3: Yes, both A&E and construction, 96: Don't know)",Integer
+73,co_proc_ord,"Is/was the current/most recent CO/AO familiar with processing construction chang (0: No, 1: Yes, under general form of awards, 2: Yes, under construction form of award - other than FIDIC-based, 3: Yes, under FIDIC-based construction award, 96: Don't know)",Integer
+74,co_prior_exp,"Prior to the award, how many years of USG or other construction awarding experie (1: Less than 2 years, 2: 2-5 years, 3: More than 5 years, 96: Don't know)",Integer
+75,co_sup_prior,"Not including this award, how many prior construction awards had the current/mos (1: None, 2: 1-3, 3: 4-5, 4: 6-10, 5: More than 10, 96: Don't know)",Integer
+76,co_fidic_sup,"Did the current/most recent CO/AO have previous experience managing FIDIC awards (0: No, 1: Yes, 96: Don't know)",Integer
+77,cor_no,"Over the life of the award to date how many Awarding Officer Representatives (CO (0: None, 1: Enter Number:)",Integer
+78,cor_sup_per_start,"What was the start date of the period during which the current/most recent COR/A (1: Date, 96: Don't know)",Integer
+79,cor_sup_per_end,"What was the end date of the period during which the current/most recent COR/AOR (1: Date, 96: The COR's tenure is ongoing)",Integer
+80,cor_sitevisit,"Throughout the construction period, on average, how many times annually did the  (1: (Average number of site visits annually), 96: Don't know)",Integer
+81,cor_cert,"Did the current/most recent COR/AOR receive training in construction and/or A&E  (0: No, 1: Yes, construction only, 2: Yes, A&E only, 3: Yes, both A&E and construction, 96: Don't know)",Integer
+82,cor_proc_ord,"Was current/most recent COR/AOR familiar with processing construction change ord (0: No, 1: Yes, under general form of awards, 2: Yes, under construction form of award - other than FIDIC-based, 3: Yes, under FIDIC-based construction award, 96: Don't know)",Integer
+83,cor_sup_prior,"Not including this award, how many prior construction awards had the current/mos (1: None, 2: 1-3, 3: 4-5, 4: 6-10, 5: More than 10, 96: Don't know)",Integer
+84,cor_fidic_train,"Did the current/most recent COR/AOR receive FIDIC training or have previous expe (0: No, 1: Yes, 96: Don't know)",Integer
+85,cor_lic_eng,"Is/was the current/most recent COR/AOR a professional licensed engineer? (0: No, 1: Yes, US licensed, 2: Yes, Host Country licensed, 3: Yes, internationally licensed, 96: Don't know)",Integer
+86,cor_mgmt_cert,"Does/did the current/most recent COR/AOR have any of the following certification (1: PMP (Project Management Professional), 2: CCM (Certified Construction Manager), 3: CCC (Certified Cost Consultant), 4: CCE (Certified Cost Engineer), 5: Other equivalent certification:, 6: None, 96: Don't know)",Integer
+87,doc_prvd,"Who provided these documents to the awardee? (1: USAID, 2: Host country government, 3: Other, Specify)",Integer
+88,doc_when,"When were these documents given to the awardee? (1: Tendering process, 2: Prior to notice to proceed, 3: After notice to proceed, 4: Other, specify, 96: Don't know)",Integer
+89,projaudit,"Is/Was a USAID performance evaluation of the construction components performed d (0: No, 1: Yes; mid-term evaluation, 2: Yes; final evaluation, 96: Don't know)",Integer
+90,stkrch,"Did the activity have a stakeholder engagement plan developed for the constructi (0: No, 1: Yes, 96: Don't know)",Integer
+91,rep_freq_co_cor,"How often is/was a progress report required to the CO/AO or COR/AOR, or equivale (1: Weekly, 2: Monthly, 3: Quarterly, 4: Other, Specify, 96: Don't know/Not applicable)",Numeric
+92,rep_freq_sup_eng,"How often is/was a progress report required to the Supervising Engineer (USAID o (1: Weekly, 2: Monthly, 3: Quarterly, 4: Other (Specify), 96: Don't know/Not applicable)",Numeric
+93,hs_rep,"Is the awardee required to report to USAID and/or the supervising engineer, any  (0: No, 1: Yes, 96: Don't know)",Integer
+94,env_rep,"Is the awardee required to report to USAID environmental incidents/impacts (any  (0: No, 1: Yes, 96: Don't know)",Integer
+95,des_over,"Was there a supervising engineer for the engineering design process? (0: No, 1: Yes, USAID, 2: Yes, other organization, 96: Don't know)",Integer
+96,eng_over,"Who provided the engineering design oversight? Note: A licensed professional eng (1: USAID Direct Hire (non-engineer), 2: USAID Direct Hire (engineer), 3: USAID Direct Hire (professsional licensed engineer), 4: FSN (non-engineer), 5: FSN (engineer), 6: FSN (professional licensed engineer), 7: PSC (non-engineer), 8: PSC (engineer), 9: PSC (professional qualified engineer), 10: A&E firm (US), 11: A&E firm (Host Country), 12: A&E firm (Third Country National), 13: Host country government engineer, 14: Other USG Agency (e.g. Army Corps of Engineers), 15: Other, Specify, 96: Don't know)",Integer
+97,eng_over2,"Who provided the engineering design oversight? (1: US or international staff/consultant (non-engineer), 2: US or international staff/consultant (engineer), 3: US or international staff/consultant (professional licensed engineer), 4: HOST COUNTRY staff/consultant (non-engineer), 5: HOST COUNTRY staff/consultant (engineer), 6: HOST COUNTRY staff/consultant (professional licensed engineer), 7: A&E firm (US), 8: A&E firm (Host Country), 9: A&E firm (Third Country National))",Integer
+98,sup_con,"Was the supervising engineer on staff prior to construction award execution? (0: No, 1: Yes, 96: Don't know)",Integer
+99,sup_rev,"Did the supervising engineer review design documents prior to construction tende (0: No, 1: Yes, 96: Don't know)",Integer
+100,site_inspct,"Were construction site inspections conducted? (0: No, 1: Yes, USAID, 2: Yes, Non-USAID, 96: Don't know)",Integer
+101,con_over,"Who is/was the main provider of construction site inspections? Note: A licensed  (1: USAID Direct Hire (non-engineer), 2: USAID Direct Hire (engineer), 3: USAID Direct Hire (professsional licensed engineer), 4: FSN (non-engineer), 5: FSN (engineer), 6: FSN (professional licensed engineer), 7: PSC (non-engineer), 8: PSC (engineer), 9: PSC (professional qualified engineer), 10: A&E firm (US), 11: A&E firm (Host Country), 12: A&E firm (Third Country National), 13: Host country government engineer, 14: Other USG Agency (e.g. Army Corps of Engineers), 15: Other, Specify, 96: Don't know)",Numeric
+102,con_over2,"Who is/was the main provider of construction site inspections? (1: US or international staff/consultant (non-engineer), 2: US or international staff/consultant (engineer), 3: US or international staff/consultant (professional licensed engineer), 4: HOST COUNTRY staff/consultant (non-engineer), 5: HOST COUNTRY staff/consultant (engineer), 6: HOST COUNTRY staff/consultant (professional licensed engineer), 7: A&E firm (US), 8: A&E firm (Host Country), 9: A&E firm (Third Country National), 10: Other (specify):, 96: Don't know)",Integer
+103,inspct_num,"Throughout the construction period, on average, how often did the site inspector (1: Daily, 2: Weekly, 3: Bi-weekly, 4: Monthly, 5: Quarterly, 96: Don't know)",Integer
+104,matl_test,"Which of the following describes the construction material testing associated wi (1: Award requirement, the awardee provided material submittals and USAID confirms engineering oversight, 2: USAID confirms that the awardee conducted testing, but no award requirements and no engineering oversight, 3: USAID cannot confirm any testing was completed, 4: Other; please describe:, 96: Don't know/cannot answer; please explain:)",Numeric

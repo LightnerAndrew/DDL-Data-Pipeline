@@ -4,6 +4,8 @@
 import numpy as np
 import pandas as pd
 import time
+import regex as re
+import copy
 
 # work with files
 import glob
@@ -20,8 +22,10 @@ from requests.auth import HTTPBasicAuth
 
 
 # local functions 
-from .___init___ import *
-from helpers import access_dec_title 
+from .__init__ import *
+from .helpers import access_dec_title, set_column_types, create_col_labels
+from .metadata import access_to_socrata_mapping
+
 
 '''
 _create 
@@ -47,15 +51,17 @@ class create_asset(auth):
 
     '''
     # define parameters
-    name = 'asset name'
-    description = 'asset descripton'
-    uid = 'usaid_uid'
+    asset_name = 'asset name'
+    asset_description = 'asset descripton'
+    asset_uid = 'usaid_uid'
     isParent = False
     today = datetime.datetime.today().strftime('%Y-%m-%d-%H')
     folder_path = './'
+    associated_datasets = [{}]
+    datasets = []
 
 
-    def read_metadata(self, filename = 'asset_metadata.csv')
+    def read_asset_metadata(self, filename = 'asset_metadata.csv'):
         '''
         Read metadata from the .csv file with the first column as the field name and the second as the value. Place metadata in the correct format. 
 
@@ -74,6 +80,14 @@ class create_asset(auth):
 
         # place into the dictionary format for ease of access . 
         metadata = metadata.set_index('Field').to_dict()['Value']
+
+        # set asset attributes 
+        self.asset_name = metadata['Title']
+        self.asset_description = metadata['description']
+        self.asset_uid = metadata['Unique-Identification'] + '-000V01'
+        self.asset_metadata = access_to_socrata_mapping(metadata)
+        self.informed_consent_file = metadata['Informed-Consent-Filename']
+        self.consent_pagenumber = metadata['Informed-Consent-pagenumber']
         
         # return the asset metadata which will be used to 
         return metadata 
@@ -85,28 +99,30 @@ class create_asset(auth):
         step is not necessary for children or USAID datasets. 
         '''
 
+        self.isParent = True
+
         # create the view of the asset 
         authen = HTTPBasicAuth(self.username, self.password)
         view_path = 'https://{}/api/views'.format(self.link)
-        initial_metadata = '{"name": "{}", "metadata":{"isParent":true}}'.format(self.name)
-        r = requests.post(view_path, auth=auth, data=metadata)
+        initial_metadata = '{"name": "'+self.asset_name+'", "metadata":{"isParent":true}}' 
+        r = requests.post(view_path, auth=authen, data=initial_metadata)
         
         # save results from the create of the view 
         results = r.json()
-        new_fourfour = results['id']
+        self.asset_fourfour = results['id']
 
         # publish the view of the asset 
         headers = {'Content-Type': 'application/json; charset=UTF-8'}
-        publish_path = 'https://usaid-ddl.data.socrata.com/api/publishing/v1/revision/{}'.format(new_fourfour)
+        publish_path = 'https://usaid-ddl.data.socrata.com/api/publishing/v1/revision/{}'.format(self.asset_fourfour)
         publish_metadata = '{"action":{"type":"replace"},"is_parent":true,"creation_source":"browser"}'
 
-        r = requests.post(publish_path, auth=auth, data=publish_metadata, headers=headers)
+        r = requests.post(publish_path, auth=authen, data=publish_metadata, headers=headers)
 
-        return r
+        return self.asset_fourfour
 
 
 
-    def push_attachments(self): 
+    def push_attachments(self, windows=False): 
         '''
         The add_attachments() function takes all files with in the Attachments folder 
         in the folder_path directory and attaches the files to the document. 
@@ -122,10 +138,14 @@ class create_asset(auth):
         for file_path in filepaths:
 
             # push the attachment to socrata, return the metadata format to add to asset metadata 
-            attachment_metadata = push_attachment(file_path, self.fourfour, self.link, self.username, self.password)
+            attachment_metadata = push_attachment(file_path, self.asset_fourfour, self.link, self.username, self.password)
+
+            split_value = '/'
+            if windows == True: 
+                split_value = "\\"
 
             # select the name from the longer file path
-            name = file_path.rsplit('/', 1)[1]
+            name = file_path.rsplit(split_value, 1)[1]
             title = name.split('.')[0]
 
             # clean the title
@@ -133,10 +153,10 @@ class create_asset(auth):
 
             # check to find the DEC name
             if (len(name) == 12) and (name[-3:] == 'pdf'):
-                try:
-                    title = access_dec_title(title)
-                except:
-                    title = title
+                #try:
+                title = access_dec_title(title)
+                #except:
+                #    title = title
 
             # add the name and the title to the metadata dictionary 
             attachment_metadata['name'] = title
@@ -149,7 +169,7 @@ class create_asset(auth):
         return attachments
 
     
-    def add_consentfile(self, file_name='Informed Consent.pdf', page_number = None):
+    def add_consentfile(self):
         '''
         Add a file or a page within a file as the consent file. 
 
@@ -162,35 +182,42 @@ class create_asset(auth):
             str: the string to place within the 'Informed Consent' metadata page. 
         '''
 
-        if page_number == None: 
+        if self.consent_pagenumber == '': 
             
             # access the socrata uid in the attachment which shared that attachement
-            consent_assetid = [attach['asset_id'] for attach in self.attachments if attach['name']+'.pdf'==file_name][0]
+            consent_assetid = [attach['asset_id'] for attach in self.attachments if attach['filename']==self.informed_consent_file][0]
 
             # create string for the award date 
-            consent_metadata_value  = 'https://usaid-ddl-dev.data.socrata.com/api/views/{}/files/{} ({})'.format(self.fourfour, consent_assetid, file_name)
+            consent_metadata_value  = 'https://usaid-ddl-dev.data.socrata.com/api/views/{}/files/{} ({})'.format(self.asset_fourfour, consent_assetid, self.informed_consent_file)
 
         else: 
 
             # create the one page attachment and upload it to the asset; add to metadata attachment list. 
             # write pdf to new file - named Informed Consent Doc - {asset}.pdf
-            inputpdf = PdfFileReader(open(self.folder_path+'/Attachments/'+file_name, "rb"))
+            inputpdf = PdfFileReader(open(self.folder_path+'/Attachments/'+self.informed_consent_file, "rb"))
             output = PdfFileWriter()
-            output.addPage(inputpdf.getPage(int(page_number)-1))
-            export_path = self.folder_path+'/Attachments/' + 'Informed Consent Document.pdf'
+            output.addPage(inputpdf.getPage(int(self.consent_pagenumber)-1))
+            export_path = self.folder_path+'Attachments/' + 'Informed Consent Document.pdf'
+            with open(export_path, "wb") as outputStream:
+                    output.write(outputStream)
+
 
             # push the pdf to socrata asset 
-            consent_metadata = push_attachment(file_path, self.fourfour, self.link, self.username, self.password)
+            consent_metadata = push_attachment(export_path, self.asset_fourfour, self.link, self.username, self.password)
             consent_metadata['name'] = 'Informed Consent Document'
 
-            # create the string to be placed in the 
-            consent_metadata_value  = 'https://usaid-ddl-dev.data.socrata.com/api/views/{}/files/{} ({})'.format(self.fourfour, consent_metadata['assetid'], consent_metadata['name'])
+            # add to the attachments 
+            self.attachments.append(consent_metadata)
 
+            # create the string to be placed in the 
+            consent_metadata_value  = 'https://usaid-ddl-dev.data.socrata.com/api/views/{}/files/{} ({})'.format(self.asset_fourfour, consent_metadata['asset_id'], consent_metadata['name'])
+
+            self.consent_metadata_value = consent_metadata_value
 
         return consent_metadata_value 
 
 
-    def add_data(self, clean_missings: list = ['.', ' ', 'N/A', 'nan', 'missing', 'na', 'n/a'], split_data: bool = True, id_vars=[0]):
+    def add_data(self, clean_missings: list = ['.', ' ', 'N/A', 'nan', 'missing', 'na', 'n/a'], split_data: bool = True, id_vars=[0], quiet:bool = False):
         '''
         The add_data function allows the user to load and clean the data to 
         prepare the data for being pushed to socrata. The function returns a list of dictionaries 
@@ -205,34 +232,40 @@ class create_asset(auth):
         :type split_data: bool
         :param id_vars: the index location of the variables which identify a column in a dataset. 
         :type id_vars: list 
+        :param quiet: print the progress of the dataset ingestion.
+        :type quiet: bool
 
         return 
             list of `[{'name': str, 'desc': str, 'data': pd.DataFrame(), 'ds_num': int, 'sep_num': int, }, ...]`. 
         '''
 
         # find all dataset folders within the Data folders
-        datasets_folders = [folder for folder in os.walk(self.folder_path +'/Data')][0][1]
+        dataset_folders = [folder for folder in os.walk(self.folder_path +'/Data')][0][1]
         
-        datasets = []
+        if quiet == False: 
+            print(dataset_folders)
 
         for index, ds in enumerate(dataset_folders): 
             
+            if quiet == False: 
+                print(ds)
+
             # set file to dataset 
             ds_folder_path = self.folder_path+'/Data/'+ds+'/'
 
             # read the metadata.csv file within the dataset folder 
             md_file = ds_folder_path + 'metadata.csv'
-            ds_md = read_csv(md_file).set_index('Field')
+            ds_md = pd.read_csv(md_file).set_index('Field')
 
             # select key metadata
             name = ds_md.loc['distribution-title', 'Value'] 
             description = ds_md.loc['distribution-description', 'Value']
-            uid = self.uid +'-'+ ds_md.loc['GUID Suffix', 'Value']
-            ds_file_name = ds.md.loc['distribution-downloadURL', 'Value']
+            uid = self.asset_uid +'-'+ ds_md.loc['GUID_suffix', 'Value']
+            ds_file_name = ds_md.loc['distribution-downloadURL', 'Value']
             rowLabel = ds_md.loc['row', 'Value']
-            codebook_name = ds_md.loc['distribution-DescribedBy', 'Value']
+            codebook_name = ds_md.loc['distribution-describedBy', 'Value']
             codebook_path = ds_folder_path + codebook_name 
-            codebook_columns = ds_md.loc['DescribedBy-columns', 'Value']
+            codebook_columns = ds_md.loc['describedBy-columns', 'Value']
 
 
 
@@ -254,7 +287,7 @@ class create_asset(auth):
             isSame = data.equals(data_clean)
 
             if isSame == False: 
-                ds_file_name = '_modified_'+today+'_' + ds_file_name
+                ds_file_name = '_modified_'+self.today+'_' + ds_file_name
                 # export the modified data for reference. 
                 data.to_csv(ds_folder_path+ds_file_name, index=False)
 
@@ -264,21 +297,27 @@ class create_asset(auth):
             ##### set the column mappings 
             #######################################
 
-            data_columns = list(data.columns)
+            data_columns = list(data_clean.columns)
 
             if codebook_columns !='[]': 
 
                 codebook_columns = codebook_columns.replace(' ', '')
+
+                to_adjust = [('[', '["'), (']', '"]'), (',', '","')]
+
+                for pair in to_adjust: 
+                    codebook_columns = codebook_columns.replace(pair[0], pair[1])
+
                 column_list = ast.literal_eval(codebook_columns)
-                skiprows = int(values[0][1])
-                keepColumns = values[0][0]+', ' + values[1][0]
+                skiprows = int(column_list[0][1])
+                keepColumns = column_list[0][0]+', ' + column_list[1][0]
 
                 # if the codebok is an excel document.
                 if (codebook_path[-4:] == 'xlsx') or (codebook_path[-3:] == 'xls'):
                     # read the file as an excel
                     codes = pd.read_excel(codebook_path,
                                         skiprows=skip-1,  # subract one to account for indexing at 0,
-                                        usecols=columns).dropna()
+                                          usecols=keepColumns).dropna()
 
                 if codebook_path[-3:] == 'csv':
                     # read aas csv (generate a mapping to the excel coordinate format)
@@ -288,14 +327,14 @@ class create_asset(auth):
                     # adjust if the csv needs to be read as encoding = latin-1
                     try:
                         codes = pd.read_csv(codebook_path,
-                                            skiprows=skip-1,  # subract one to account for indexing at 0,
-                                            usecols=[column_maps[values[0][0]], column_maps[values[1][0]]]).dropna()
+                                            skiprows=skiprows,  # subract one to account for indexing at 0,
+                                            usecols=[column_maps[column_list[0][0]], column_maps[column_list[1][0]]]).dropna()
 
                     except:
                         codes = pd.read_csv(codebook_path,
-                                            skiprows=skip-1,  # subract one to account for indexing at 0,
-                                            usecols=[column_maps[values[0][0]],
-                                                    column_maps[values[1][0]]],
+                                            skiprows=skiprows,  # subract one to account for indexing at 0,
+                                            usecols=[column_maps[column_list[0][0]],
+                                                     column_maps[column_list[1][0]]],
                                             encoding='latin-1').dropna()
 
                 # clean the columns 
@@ -328,25 +367,21 @@ class create_asset(auth):
             ##### split data if necessary 
 
             # find the number of columns 
-            num_columns = len(columns)
+            num_columns = len(data_columns)
 
             # generate the id_dataframe which holds the ID var 
             id_df = data_clean.iloc[:, id_vars]
 
             if num_columns > 350: 
 
-                # clean the data 
-                data, errors = prep_data(data)
-
                 rows_added = 1
                 split_number = 1 
-
-                
+ 
                 while rows_added < num_columns: 
                     
                     # create the thinner dataframe
                     end = rows_added+350 
-                    selection = data_clean.iloc[:, [rows_added:end]]
+                    selection = data_clean.iloc[:, rows_added:end]
                     split_df = pd.concat([id_df, selection], axis=1)
 
                     # export the dataframe 
@@ -389,10 +424,14 @@ class create_asset(auth):
                              }
 
                     # add to the dataset dictionary 
-                    datasets.append(ds_dict)
+                    self.datasets = self.datasets.append(ds_dict)
 
                     # move the rows_added by 350 
                     rows_added = rows_added + 350 
+
+                    split_number += 1
+
+                
 
             else: 
                 # if there are less than 350 columns, generate one dataset dictionary 
@@ -414,87 +453,225 @@ class create_asset(auth):
                 }
 
                 # add to the dataset dictionary
-                datasets.append(ds_dict)
+                self.datasets = self.datasets.append(ds_dict)
 
-            return datasets 
-                    
-
-
-                    # 
+        return self.datasets
 
 
-
-
-
-
-
-                    
-
-
-                    
-
-
-
-
-
-
-
-
-
-
-
-             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    def add_metadata(self): 
+    def push_datasets(self, quiet:bool = True):
         '''
+        After preparing the data using the `add_data()` method, push_datasets places the data and metadata within the 
+        create_asset.datasets attribute and sets the create_asset.
 
-        
+        :param quiet: print the progress of the dataset ingestion.
+        :type quiet: bool
+        ''' 
+
+        for index, dataset in enumerate(self.datasets): 
+
+            ##### create the dataset
+            # create revision and output
+            (revision, output_schema) = Socrata(self.auth_obj).create(
+                name=dataset['name'],
+                description=dataset['description']
+            ).df(dataset['data'])
+
+            if quiet == False: 
+                print(dataset['name']+' has been created.')
+
+            ##### Access metadata - create the associated datasets metadata input 
+            ds_fourfour = revision.attributes['fourfour']
+            
+            self.associated_datasets.append({
+                                                'title': dataset['name'], 
+                                                'description': dataset['description'], 
+                                                'uid': ds_fourfour, 
+                                                'urls': 
+                                                {
+                                                    'dataset': 'https://data.usaid.gov/d/{}'.format(ds_fourfour)
+                                                }
+                                            })
+
+            
+
+    
+            ##### fix errors if they exist 
+
+            # count the number of columns with errors
+            (ok, errors) = output_schema.schema_errors()
+            number_errors = len(errors)
+
+            fail_cols = []
+            # if there are errors in the upload
+            if number_errors != 0:
+                try:
+                    # find the columns where there are errors
+                    # select the columns of interest
+                    for index in range(0, len(errors)):
+
+                        keys = errors[index].keys()
+
+                        for key in keys:
+
+                            if list(errors[index][key].keys())[0] != 'ok':
+
+                                fail_cols.append(key)
+
+                    fail_columns = list(set(fail_cols))
+
+                    # then we set the column types to the pandas
+                    command_string = set_column_types(fail_columns)
+                    (ok, new_output_schema) = eval(command_string)
+
+                    # wait for changes to occur
+                    (ok, output_schema) = new_output_schema.wait_for_finish()
+                    assert ok, output_schema
+                except:
+                    print('Could not fix errors...')
+      
+            
+            #### generate the column mappings 
+
+
+            if dataset['codebook_info']['column_matches'] != 0: 
+
+                # generate mapping from display names to id names, becuase the id names can sometime sbe different (map on id names )
+                name_mapping = {output_schema.attributes['output_columns'][i]['display_name']: output_schema.attributes['output_columns'][i]['field_name'] for i in range(0, len(output_schema.attributes['output_columns']))}
+                
+                # generate new column_labels dictionary {field_name: label_value}
+                col_labels_mapping = {}
+                no_matches = 0
+                for display_name in list(name_mapping.keys()): 
+                    try: 
+                        key = name_mapping[display_name]
+                        value = dataset['codebook_info']['column_labels'][display_name]
+
+                        col_labels_mapping[key] = value
+                    except KeyError: 
+                        no_matches += 1
+
+                # generate the command string 
+                command_string = create_col_labels(col_labels_mapping)
+
+                if quiet == False: 
+                    print('At column description transformation.')
+
+                # run the command string
+                (ok, new_output_schema) = eval(command_string)
+                assert ok, new_output_schema
+
+                (ok, output_schema) = new_output_schema.wait_for_finish()
+                assert ok, output_schema
+
+            # apply the revisions to the dataset 
+            (ok, job) = revision.apply(output_schema=output_schema)
+
+            #print progress
+            job.wait_for_finish()
+
+            ######## add the codebook to the attachments 
+            try: 
+                codebook_path = dataset['codebook_info']['codebook_path']
+                codebook_name = codebook_path.rsplit('/', 1)[1]
+
+                codebook_metadata = push_attachment(codebook_path, ds_fourfour, self.link, self.username, self.password)
+                codebook_metadata['name'] = codebook_name.split('.')[0]
+                print(codebook_metadata)
+
+            except: 
+                codebook_metadata = None
+
+
+
+            ##### push dataset metadata 
+
+            md = copy.deepcopy(self.asset_metadata)
+
+            # make changes to the metadata for the dataset 
+            md['metadata']['name'] = dataset['name']
+            md['metadata']['description'] = dataset['description']
+            md['metadata']['metadata']['collectionParent'] = self.asset_fourfour
+            md['metadata']['metadata']['rowLabel'] = dataset['rowLabel']
+            md['metadata']['privateMetadata']['custom_fields']['USAID Use Only']['USAID GUID'] = dataset['uid']
+            md['attachments'] = self.attachments + [codebook_metadata]
+
+
+            # push the metadata fields to socrata 
+            # push and apply the edits to socrata, push_metadata function is form the push.py 
+            r = push_metadata(ds_fourfour, self.link, self.username, self.password, md , '1')
+
+            r = apply_revision(ds_fourfour, self.link, self.username, self.password, '1')
+            
+            if quiet=='False':
+                print(r) 
+                print('Metadata has been updated\n')
+ 
+
+
+ 
+        return self.associated_datasets
+
+
+
+    def push_asset_metadata(self, quiet:bool =True, rev_number:int = 0):
         '''
-        # define parameters 
-        name = 'asset name'
-        description = 'asset descripton'
-        uid = 'usaid_uid'
-        isParent = False
-        
-        
-        class datasets(asset): 
-            
-            '''
-            The dataset class prepares the underlying data to be pushed to socrata. 
-            
-            :attr folder_path: the path to the folder with the data. default = './Data'
-            :type folder_path: str. 
-            :attr file_name: name of the dataset; default = '*' 
-            :type file_name: str
-            :attr file_type: the file type of the folder. default = 'csv'; valid options = {'csv', 'xlsx', 'xls'}
-            :type file_type: str. 
-        
-            '''
-            
-            # define attributes 
-            
-            
-            
-            def read_file(self)
-            
-            
-        
-        
-        
-        
-        
+        This function concludes the creation of the data asset by pushing the asset metadata
+        with the associated datasets. 
+
+        :param quiet: print the progress of the asset metadata update. 
+        :type quiet: bool. 
+
+        return 
+            response
+        '''
+        self.asset_metadata['metadata']['metadata']['additionalAccessPoints'] = self.associated_datasets
+        self.asset_metadata['attachments'] = self.attachments 
+
+        r = push_metadata(self.asset_fourfour, self.link,
+                          self.username, self.password, self.asset_metadata, str(rev_number))
+
+        r = apply_revision(self.asset_fourfour, self.link,
+                           self.username, self.password, str(rev_number))
+
+        if quiet == 'False':
+            print(r)
+            print('Metadata has been updated\n')
+
+
+        return r
+
+
+
+
+    def delete_asset(self, quiet = True): 
+        '''
+        Function to delete the data asset or datasets associated with the data asset. 
+
+        :param quiet: print the results of the removal (True/False)
+        :type quiet: bool. 
+
+        return 
+
+        '''
+        delete_asset = input("Are you sure you want to delete the asset: "+self.asset_fourfour+'? (yes/no)')
+        delete_dataset = input("Would you like to delete the associated datasets? (yes/no)")
+
+        if delete_asset == 'yes':
+            # detete the asset 
+            r = self.client.delete(self.asset_fourfour)
+
+            if quiet==False: 
+                print(r)
+
+        if delete_dataset == 'yes':
+
+            # list of associated datasets 
+            ds_fourfours = [ds['uid'] for ds in self.associated_datasets if ds!= {}]
+
+            for ds in ds_fourfours: 
+                r = self.client.delete(ds)
+
+                if quiet==False: 
+                    print(r)
+
+        return r

@@ -3,9 +3,53 @@ import requests
 from urllib import request
 import base64
 import urllib
+import pandas as pd
+
+
+def create_col_labels(col_dict):
+
+    start = "output_schema"
+
+    for key in col_dict:
+        add = ".change_column_metadata('"+key + \
+            "', 'description').to('"+col_dict[key].replace("'", '')+"')"
+        start += add
+    end = ".run()"
+
+    final_command = start+end
+
+    return final_command
 
 
 
+def set_column_types(list_of_fails):
+    '''
+    Transform all columns where ingestion errors are recorded into text columns. 
+    Returns the string of a command to be run with `eval()`. 
+    
+    :param list_of_fails: list of columns where ingestion errors exist. 
+    :type list_of_fails: list
+    
+    return 
+        str. of command
+    '''
+    command = "output_schema.change_column_transform('"
+
+    print('Errors to be fixed:')
+    print(list_of_fails)
+
+    for index, col in enumerate(list_of_fails):
+
+        command += col+"').to('to_text(`"+col+"`)')"
+
+        length = len(list_of_fails)
+
+        if index != length-1:
+            command += ".change_column_transform('"
+        else:
+            command += ".run()"
+
+    return command
 
 
 
