@@ -59,7 +59,7 @@ class auth(object):
         '''
 
         # get the user information for the username and password
-        self.username = input("Socrata user? (email address)")
+        self.username = input("Socrata user? (email address) ")
         self.password = getpass.getpass("Socrata password? ")
 
         # build the authentication object
@@ -67,11 +67,14 @@ class auth(object):
         self.client = soda.Socrata(self.link, self.api_key, self.username, self.password)
 
 
-    def client_close(self): 
+    def get_asset_dir(self): 
 
-        self.client.close()
+        directory = self.client.get('xz8w-ipus')
 
-        return print('Client has been closed.')
+        directory = pd.DataFrame.from_records(directory)
+
+        return directory
+
 
 
 
