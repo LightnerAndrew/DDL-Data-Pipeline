@@ -3,7 +3,7 @@ pandas==0.23.0
 numpy==1.14.3
 sodapy==1.4.7
 socrata_py==0.4.13
-requests==2.19.1
+requests>=2.20.0
 PyPDF2==1.26.0
 regex==2018.11.22
 socrata==0.0.1
