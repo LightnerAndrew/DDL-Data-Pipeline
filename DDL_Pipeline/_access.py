@@ -50,6 +50,9 @@ class access_asset(auth):
                 self.child_fourfours = []
                 self.child_names = []
 
+        except: 
+            Exception('The asset is missing key metadata fields.')
+
 
         # save all the metadata for future use
         self.metadata = metadata
