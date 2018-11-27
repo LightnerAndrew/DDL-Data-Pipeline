@@ -1,7 +1,7 @@
 
 
 from .__init__ import *
-
+from .helpers import DictQuery, nested_set, find_path, iter_paths
 '''
 _access
 ========

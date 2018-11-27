@@ -29,8 +29,8 @@ class auth(object):
     '''
 
     # set the parameters
-    prod = False
-    link = 'usaid-ddl-dev.data.socrata.com'
+    prod = True
+    link = 'usaid-ddl.data.socrata.com'
     api_key = 'QTmaBMt3nOu6yM4rFFLBcdkyg'
 
     def reset_environment(self):
