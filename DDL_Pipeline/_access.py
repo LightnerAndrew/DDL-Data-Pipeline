@@ -35,19 +35,20 @@ class access_asset(auth):
         # set the basic fields 
         self.asset_name = metadata['name']
         self.asset_description = metadata['description']
-        self.isParent = DictQuery(metadata).get("metadata|isParent")
-        self.asset_uid = DictQuery(metadata).get("privateMetadata|custom_fields|USAID Use Only|USAID GUID")
-        
-        # access the ids of datasets if they exist 
-        links = DictQuery(metadata).get("metadata|additionalAccessPoints")
-        self.associated_datasets = links
+        try: 
+            self.isParent = DictQuery(metadata).get("metadata|isParent")
+            self.asset_uid = DictQuery(metadata).get("privateMetadata|custom_fields|USAID Use Only|USAID GUID")
+            
+            # access the ids of datasets if they exist 
+            links = DictQuery(metadata).get("metadata|additionalAccessPoints")
+            self.associated_datasets = links
 
-        if links != None: 
-            self.child_fourfours = [links[i]['uid'] for i in range(0, len(links)) if len(links[i].keys()) != 0]
-            self.child_names = [links[i]['title'] for i in range(0, len(links)) if len(links[i].keys()) != 0]
-        else: 
-            self.child_fourfours = []
-            self.child_names = []
+            if links != None: 
+                self.child_fourfours = [links[i]['uid'] for i in range(0, len(links)) if len(links[i].keys()) != 0]
+                self.child_names = [links[i]['title'] for i in range(0, len(links)) if len(links[i].keys()) != 0]
+            else: 
+                self.child_fourfours = []
+                self.child_names = []
 
 
         # save all the metadata for future use
