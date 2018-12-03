@@ -175,7 +175,10 @@ class edit_metadata(edit_asset):
         self.rev_number = find_rev_number(self.fourfour, self.link, self.username, self.password)
 
         # define fix errors in field 
-        field_path = find_path(self.metadata, self.field)
+        if self.new_field==False: 
+            field_path = find_path(self.metadata, self.field)
+        else: 
+            field_path = self.field_path
 
         if replace==False: 
             # access previous value
