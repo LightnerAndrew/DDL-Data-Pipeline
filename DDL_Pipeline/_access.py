@@ -10,7 +10,7 @@ _access
 
 class access_asset(auth):
     '''
-
+    
 
 
     '''
