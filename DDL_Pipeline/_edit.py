@@ -54,12 +54,24 @@ class edit_asset(auth):
 
         # set the basic fields 
         self.name = metadata['name']
+
         try:
             self.description = metadata['description']
+        except: 
+            self.description = 'no description available'
+
+        try: 
             self.isParent = DictQuery(metadata).get("metadata|isParent")
+        except: 
+            self.isParent = 'not isParent available'
+        
+        try: 
             self.uid = DictQuery(metadata).get("privateMetadata|custom_fields|USAID Use Only|USAID GUID")
-            
+        except: 
+            self.uid = 'no uid available'
             # access the ids of datasets if they exist 
+        
+        try: 
             links = DictQuery(metadata).get("metadata|additionalAccessPoints")
 
 
@@ -70,8 +82,9 @@ class edit_asset(auth):
                 self.child_fourfours = []
                 self.child_names = []
         except: 
-            self.description = 'no description available'
-            
+            self.child_fourfours = 'no child links available'
+            self.child_names ='no child name availalbe'
+
 
 
         # save all the metadata for future use
