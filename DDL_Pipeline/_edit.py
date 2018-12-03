@@ -177,10 +177,9 @@ class edit_metadata(edit_asset):
         # define fix errors in field 
         field_path = find_path(self.metadata, self.field)
 
-        # access previous value 
-        prior = DictQuery(self.metadata).get(field_path)
-
         if replace==False: 
+            # access previous value
+            prior = DictQuery(self.metadata).get(field_path)
             new = prior.replace(self._from, self._to)
         else: 
             new = self._to
