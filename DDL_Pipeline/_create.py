@@ -239,6 +239,8 @@ class create_asset(auth):
             list of `[{'name': str, 'desc': str, 'data': pd.DataFrame(), 'ds_num': int, 'sep_num': int, }, ...]`. 
         '''
 
+
+        self.datasets = []
         # find all dataset folders within the Data folders
         dataset_folders = [folder for folder in os.walk(self.folder_path +'/Data')][0][1]
         
@@ -267,7 +269,7 @@ class create_asset(auth):
             codebook_path = ds_folder_path + codebook_name 
             codebook_columns = ds_md.loc['describedBy-columns', 'Value']
 
-
+            
 
             ##### clean the data 
 
@@ -424,6 +426,7 @@ class create_asset(auth):
                              }
 
                     # add to the dataset dictionary 
+                    print(self.datasets)
                     self.datasets.append(ds_dict)
 
                     # move the rows_added by 350 
@@ -453,6 +456,7 @@ class create_asset(auth):
                 }
 
                 # add to the dataset dictionary
+                print(self.datasets)
                 self.datasets.append(ds_dict)
 
         return self.datasets
