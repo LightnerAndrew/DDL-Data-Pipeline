@@ -320,7 +320,7 @@ class create_asset(auth):
                 if (codebook_path[-4:] == 'xlsx') or (codebook_path[-3:] == 'xls'):
                     # read the file as an excel
                     codes = pd.read_excel(codebook_path,
-                                        skiprows=skip-1,  # subract one to account for indexing at 0,
+                                        skiprows=skiprows-1,  # subract one to account for indexing at 0,
                                           usecols=keepColumns).dropna()
 
                 if codebook_path[-3:] == 'csv':
