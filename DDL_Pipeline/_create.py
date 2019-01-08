@@ -242,7 +242,7 @@ class create_asset(auth):
 
         self.datasets = []
         # find all dataset folders within the Data folders
-        dataset_folders = [folder for folder in os.walk(self.folder_path +'/Data')][0][1]
+        dataset_folders = [folder for folder in os.walk(self.folder_path +'/Data') if folder.startswith('.')==False][0][1]
         
         if quiet == False: 
             print(dataset_folders)
