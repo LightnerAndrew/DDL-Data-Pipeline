@@ -426,7 +426,6 @@ class create_asset(auth):
                              }
 
                     # add to the dataset dictionary 
-                    print(self.datasets)
                     self.datasets.append(ds_dict)
 
                     # move the rows_added by 350 
@@ -456,7 +455,6 @@ class create_asset(auth):
                 }
 
                 # add to the dataset dictionary
-                print(self.datasets)
                 self.datasets.append(ds_dict)
 
         return self.datasets
