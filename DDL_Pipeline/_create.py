@@ -453,7 +453,7 @@ class create_asset(auth):
                 }
 
                 # add to the dataset dictionary
-                self.datasets = self.datasets.append(ds_dict)
+                self.datasets.append(ds_dict)
 
         return self.datasets
 
